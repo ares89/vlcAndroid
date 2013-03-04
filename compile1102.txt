@@ -1,0 +1,1855 @@
+For an ARMv6 device without FPU, you need a build without FPU:
+$ export NO_FPU=1
+For an ARMv5 device or the Android emulator, you need an ARMv5 build:
+$ export NO_ARMV6=1
+
+If you plan to use a release build, run 'compile.sh release'
+VLC source found
+Building the contribs
+Guessing build system... i686-linux-gnu
+Creating configuration file... config.mak
+Bootstrap completed.
+
+Run "make" to start compilation.
+
+Other targets:
+ * make install      same as "make"
+ * make prebuilt     fetch and install prebuilt binaries
+ * make list         list packages
+ * make fetch        fetch required source tarballs
+ * make fetch-all    fetch all source tarballs
+ * make distclean    clean everything and undo bootstrap
+ * make mostlyclean  clean everything except source tarballs
+ * make clean        clean everything
+ * make package      prepare prebuilt packages
+make: 没有什么可以做的为 `fetch'。
+make: 没有什么可以做的为 `all'。
+Bootstraping
+generating modules/**/Makefile.am
+..................................
++ autoreconf --install --force --verbose -I m4
+autoreconf: Entering directory `.'
+autoreconf: running: autopoint --force
+Copying file po/Makevars.template
+autoreconf: running: aclocal -I m4 --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --install --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, `autotools'.
+libtoolize: copying file `autotools/config.guess'
+libtoolize: copying file `autotools/config.sub'
+libtoolize: copying file `autotools/install-sh'
+libtoolize: copying file `autotools/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4'.
+libtoolize: copying file `m4/libtool.m4'
+libtoolize: copying file `m4/ltoptions.m4'
+libtoolize: copying file `m4/ltsugar.m4'
+libtoolize: copying file `m4/ltversion.m4'
+libtoolize: copying file `m4/lt~obsolete.m4'
+autoreconf: running: /usr/bin/autoconf --include=m4 --force
+autoreconf: running: /usr/bin/autoheader --include=m4 --force
+autoreconf: running: automake --add-missing --copy --force-missing
+autoreconf: Leaving directory `.'
++ rm -f po/Makevars.template
++ rm -f stamp-h*
++ set +x
+Successfully bootstrapped
+Configuring
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... arm-unknown-linux-androideabi
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for arm-linux-androideabi-strip... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-strip
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking for style of include used by make... GNU
+checking for arm-linux-androideabi-gcc... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm accepts -g... yes
+checking for /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm option to accept ISO C89... none needed
+checking dependency style of /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm... gcc3
+checking for /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm option to accept ISO C99... -std=gnu99
+checking how to run the C preprocessor... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 and cc understand -c and -o together... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm accepts -g... yes
+checking dependency style of /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm... gcc3
+checking how to run the C preprocessor... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 -E
+checking for arm-linux-androideabi-gcc... arm-linux-androideabi-gcc
+checking whether we are using the GNU Objective C compiler... no
+checking whether arm-linux-androideabi-gcc accepts -g... no
+checking dependency style of arm-linux-androideabi-gcc... gcc3
+checking dependency style of arm-linux-androideabi-gcc... (cached) gcc3
+checking for egrep... (cached) /bin/grep -E
+checking whether make sets $(MAKE)... (cached) yes
+checking dependency style of /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99... gcc3
+checking for desktop-file-validate... desktop-file-validate
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for C/C++ restrict keyword... __restrict
+checking for an Android system... yes
+checking for 3rd party libraries path... /home/sunlit/android/vlc/contrib/arm-linux-androideabi
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld
+checking if the linker (/home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-nm
+checking the name lister (/home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to arm-unknown-linux-androideabi format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld option to reload object files... -r
+checking for arm-linux-androideabi-objdump... arm-linux-androideabi-objdump
+checking how to recognize dependent libraries... (cached) pass_all
+checking for arm-linux-androideabi-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for arm-linux-androideabi-ar... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-ar
+checking for archiver @FILE support... @
+checking for arm-linux-androideabi-strip... (cached) /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-strip
+checking for arm-linux-androideabi-ranlib... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-ranlib
+checking command to parse /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-nm output from /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 object... ok
+checking for sysroot... no
+checking for arm-linux-androideabi-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 supports -fno-rtti -fno-exceptions... no
+checking for /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 option to produce PIC... -fPIC -DPIC
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 PIC flag -fPIC -DPIC works... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 static flag -static works... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 supports -c -o file.o... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 supports -c -o file.o... (cached) yes
+checking whether the /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 linker (/home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... cross
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -E
+checking for ld used by /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld
+checking if the linker (/home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld) is GNU ld... yes
+checking whether the /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm linker (/home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld) supports shared libraries... yes
+checking for /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm option to produce PIC... -fPIC -DPIC
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm PIC flag -fPIC -DPIC works... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm static flag -static works... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm supports -c -o file.o... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm supports -c -o file.o... (cached) yes
+checking whether the /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm linker (/home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for arm-linux-androideabi-windres... no
+checking for windres... no
+checking for bash... /bin/bash
+checking if dolt supports this host... yes, replacing libtool
+checking whether NLS is requested... yes
+checking for msgfmt... no
+checking for gmsgfmt... :
+checking for xgettext... no
+checking for msgmerge... no
+checking for ld used by GCC... /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld
+checking if the linker (/home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/arm-linux-androideabi/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... no
+checking for iconv... yes
+checking for working iconv... guessing yes
+checking how to link with libiconv... /home/sunlit/android/vlc/contrib/arm-linux-androideabi/lib/libiconv.a
+checking for GNU gettext in libintl... no
+checking whether to use NLS... no
+checking for iconv... (cached) yes
+checking for working iconv... (cached) guessing yes
+checking how to link with libiconv... /home/sunlit/android/vlc/contrib/arm-linux-androideabi/lib/libiconv.a
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking for buggy GNU/libc versions... not present
+checking for shared objects suffix... .so
+checking whether nanosleep is declared... yes
+checking for daemon... yes
+checking for fcntl... yes
+checking for fstatvfs... no
+checking for fork... yes
+checking for getenv... yes
+checking for getpwuid_r... no
+checking for isatty... yes
+checking for lstat... yes
+checking for memalign... yes
+checking for mmap... yes
+checking for openat... yes
+checking for pread... yes
+checking for posix_fadvise... no
+checking for posix_madvise... no
+checking for setlocale... yes
+checking for stricmp... no
+checking for strnicmp... no
+checking for strptime... yes
+checking for uselocale... no
+checking for atof... no
+checking for atoll... yes
+checking for dirfd... yes
+checking for fdopendir... yes
+checking for flockfile... yes
+checking for fsync... yes
+checking for getdelim... no
+checking for getpid... yes
+checking for gmtime_r... yes
+checking for inet_pton... yes
+checking for lldiv... yes
+checking for localtime_r... yes
+checking for nrand48... yes
+checking for poll... yes
+checking for posix_memalign... no
+checking for rewind... yes
+checking for setenv... yes
+checking for strcasecmp... yes
+checking for strcasestr... yes
+checking for strdup... yes
+checking for strlcpy... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strnlen... yes
+checking for strsep... yes
+checking for strtof... no
+checking for strtok_r... yes
+checking for strtoll... yes
+checking for swab... no
+checking for tdestroy... no
+checking for strverscmp... no
+checking for fdatasync... yes
+checking for static_assert in assert.h... no
+checking for working strcoll... no
+checking for accept4... no
+checking for pipe2... yes
+checking for eventfd... yes
+checking for vmsplice... no
+checking for sched_getaffinity... no
+checking for struct pollfd... yes
+checking for library containing connect... none required
+checking for library containing getaddrinfo... none required
+checking for if_nameindex... no
+checking for if_nametoindex... yes
+checking for socklen_t in sys/socket.h... yes
+checking for struct sockaddr_storage... yes
+checking for getopt_long... yes
+checking for cos in -lm... yes
+checking for lrintf in -lm... yes
+checking for library containing dlopen... none required
+checking for library containing pthread_rwlock_init... none required
+checking for clock_nanosleep in -lrt... no
+checking for nanosleep... yes
+checking for sem_init in -lrt... no
+checking search.h usability... no
+checking search.h presence... no
+checking for search.h... no
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking xlocale.h usability... no
+checking xlocale.h presence... no
+checking for xlocale.h... no
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netinet/udplite.h usability... no
+checking netinet/udplite.h presence... no
+checking for netinet/udplite.h... no
+checking sys/eventfd.h usability... yes
+checking sys/eventfd.h presence... yes
+checking for sys/eventfd.h... yes
+checking for net/if.h... yes
+checking for sys/mount.h... yes
+checking machine/param.h usability... no
+checking machine/param.h presence... no
+checking for machine/param.h... no
+checking sys/shm.h usability... no
+checking sys/shm.h presence... no
+checking for sys/shm.h... no
+checking linux/version.h usability... yes
+checking linux/version.h presence... yes
+checking for linux/version.h... yes
+checking linux/dccp.h usability... yes
+checking linux/dccp.h presence... yes
+checking for linux/dccp.h... yes
+checking scsi/scsi.h usability... no
+checking scsi/scsi.h presence... no
+checking for scsi/scsi.h... no
+checking linux/magic.h usability... yes
+checking linux/magic.h presence... yes
+checking for linux/magic.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking mntent.h usability... yes
+checking mntent.h presence... yes
+checking for mntent.h... yes
+checking for ssize_t... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for arm-linux-androideabi-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for MINIZIP... no
+checking unzip.h usability... no
+checking unzip.h presence... no
+checking for unzip.h... no
+checking for IDN... no
+checking for ntohl in sys/param.h... no
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wall... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wextra... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wsign-compare... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wundef... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wpointer-arith... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wbad-function-cast... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wwrite-strings... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wmissing-prototypes... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Wvolatile-register-var... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -Werror-implicit-function-declaration... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -pipe... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm accepts -Wall... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm accepts -Wextra... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm accepts -Wsign-compare... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm accepts -Wundef... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm accepts -Wpointer-arith... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-g++ --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm accepts -Wvolatile-register-var... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -fvisibility=hidden... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -ffast-math... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -funroll-loops... yes
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 accepts -fomit-frame-pointer... yes
+checking __attribute__ ((aligned ())) support... 64
+checking for __attribute__((packed))... yes
+checking execinfo.h usability... no
+checking execinfo.h presence... no
+checking for execinfo.h... no
+checking for backtrace... no
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 groks 3D Now! inline assembly... no
+checking if /home/sunlit/android-ndk-r8c/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin//arm-linux-androideabi-gcc --sysroot=/home/sunlit/android-ndk-r8c/platforms/android-9/arch-arm -std=gnu99 groks ARM NEON assembly... yes
+checking for LIBPROXY... no
+checking for live555 version 1324598400 or later... yes
+checking for main in -lliveMedia_pic... no
+checking for main in -lliveMedia... yes
+checking for DC1394... no
+configure: WARNING: Library libdc1394-2 >= 2.1.0 needed for dc1394 was not found
+checking for OPENCV... no
+configure: WARNING: Library opencv > 2.0 needed for opencv was not found
+checking libsmbclient.h usability... no
+checking libsmbclient.h presence... no
+checking for libsmbclient.h... no
+checking for SFTP... no
+configure: WARNING: Library libssh2 needed for sftp was not found
+checking for Linux DVB version 5.1... no
+checking for DVBPSI... yes
+checking for OGG... yes
+checking for MUX_OGG... yes
+checking for SHOUT... no
+configure: WARNING: Library shout >= 2.1 needed for shout was not found
+checking ebml/EbmlVersion.h usability... yes
+checking ebml/EbmlVersion.h presence... yes
+checking for ebml/EbmlVersion.h... yes
+checking for libebml version >= 1.0.0... yes
+checking matroska/KaxVersion.h usability... yes
+checking matroska/KaxVersion.h presence... yes
+checking for matroska/KaxVersion.h... yes
+checking for libmatroska version >= 1.0.0... yes
+checking matroska/KaxAttachments.h usability... yes
+checking matroska/KaxAttachments.h presence... yes
+checking for matroska/KaxAttachments.h... yes
+checking for main in -lebml_pic... no
+checking for main in -lebml... yes
+checking mpc/mpcdec.h usability... no
+checking mpc/mpcdec.h presence... no
+checking for mpc/mpcdec.h... no
+checking mpcdec/mpcdec.h usability... no
+checking mpcdec/mpcdec.h presence... no
+checking for mpcdec/mpcdec.h... no
+checking for libcrystalhd/libcrystalhd_if.h... no
+checking if linker supports -Bsymbolic... yes
+checking for AVCODEC... yes
+checking libavcodec/avcodec.h usability... yes
+checking libavcodec/avcodec.h presence... yes
+checking for libavcodec/avcodec.h... yes
+checking libavutil/avutil.h usability... yes
+checking libavutil/avutil.h presence... yes
+checking for libavutil/avutil.h... yes
+checking for AVFORMAT... yes
+checking libavformat/avformat.h usability... yes
+checking libavformat/avformat.h presence... yes
+checking for libavformat/avformat.h... yes
+checking libavformat/avio.h usability... yes
+checking libavformat/avio.h presence... yes
+checking for libavformat/avio.h... yes
+checking for libavutil/avutil.h... (cached) yes
+checking for SWSCALE... yes
+checking libswscale/swscale.h usability... yes
+checking libswscale/swscale.h presence... yes
+checking for libswscale/swscale.h... yes
+checking for POSTPROC... yes
+checking postproc/postprocess.h usability... no
+checking postproc/postprocess.h presence... no
+checking for postproc/postprocess.h... no
+checking for TWOLAME... no
+configure: WARNING: Library twolame needed for twolame was not found
+checking a52dec/a52.h usability... yes
+checking a52dec/a52.h presence... yes
+checking for a52dec/a52.h... yes
+checking for a52_free in -la52... yes
+checking for FLAC... yes
+checking for LIBMPEG2... yes
+checking for SPEEX... yes
+checking for SPEEXDSP... yes
+checking for OPUS... yes
+checking for THEORA... yes
+checking png.h usability... yes
+checking png.h presence... yes
+checking for png.h... yes
+checking for png_set_rows in -lpng... yes
+checking for X26410B... no
+checking for LIBASS... yes
+checking fontconfig/fontconfig.h usability... no
+checking fontconfig/fontconfig.h presence... no
+checking for fontconfig/fontconfig.h... no
+checking for KATE... no
+configure: WARNING: Library kate >= 0.3.0 needed for kate was not found
+checking for TIGER... no
+checking for GL... no
+checking GL/gl.h usability... no
+checking GL/gl.h presence... no
+checking for GL/gl.h... no
+checking for X... no
+checking X11/Xlib.h usability... no
+checking X11/Xlib.h presence... no
+checking for X11/Xlib.h... no
+checking for FREETYPE... yes
+checking Carbon/Carbon.h usability... no
+checking Carbon/Carbon.h presence... no
+checking for Carbon/Carbon.h... no
+checking for fontconfig/fontconfig.h... (cached) no
+configure: WARNING: library fontconfig not found. Styles will be disabled in freetype
+checking for FRIBIDI... yes
+checking linux/fb.h usability... yes
+checking linux/fb.h presence... yes
+checking for linux/fb.h... yes
+checking kva.h usability... no
+checking kva.h presence... no
+checking for kva.h... no
+checking sndio.h usability... no
+checking sndio.h presence... no
+checking for sndio.h... no
+checking audioclient.h usability... no
+checking audioclient.h presence... no
+checking for audioclient.h... no
+checking SLES/OpenSLES.h usability... yes
+checking SLES/OpenSLES.h presence... yes
+checking for SLES/OpenSLES.h... yes
+checking kai.h usability... no
+checking kai.h presence... no
+checking for kai.h... no
+configure: WARNING: The skins2 module depends on the Qt4 interface, Qt4 is not built so skins2 is disabled.
+checking for NCURSES... no
+checking for VSXU... no
+configure: WARNING: No package 'libvsxu' found.
+checking for BONJOUR... no
+configure: WARNING: Library avahi-client >= 0.6 needed for bonjour was not found
+checking for UPNP... no
+configure: WARNING: Library libupnp needed for upnp was not found
+checking for LIBXML2... yes
+checking whether GCRYCTL_SET_THREAD_CBS is declared... yes
+checking for gcry_control in -lgcrypt... yes
+checking for GNUTLS... yes
+checking for MCE... no
+checking for TAGLIB... yes
+checking whether byte ordering is bigendian... no
+../configure: line 47524: kde4-config: command not found
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating modules/Makefile
+config.status: creating m4/Makefile
+config.status: creating po/Makefile.in
+config.status: creating share/Makefile
+config.status: creating compat/Makefile
+config.status: creating src/Makefile
+config.status: creating lib/Makefile
+config.status: creating bin/Makefile
+config.status: creating test/Makefile
+config.status: creating modules/access/Makefile
+config.status: creating modules/access/rtp/Makefile
+config.status: creating modules/access_output/Makefile
+config.status: creating modules/audio_filter/Makefile
+config.status: creating modules/audio_mixer/Makefile
+config.status: creating modules/audio_output/Makefile
+config.status: creating modules/codec/Makefile
+config.status: creating modules/control/Makefile
+config.status: creating modules/demux/Makefile
+config.status: creating modules/gui/Makefile
+config.status: creating modules/gui/macosx/Makefile
+config.status: creating modules/gui/minimal_macosx/Makefile
+config.status: creating modules/gui/macosx_dialog_provider/Makefile
+config.status: creating modules/gui/qt4/Makefile
+config.status: creating modules/gui/skins2/Makefile
+config.status: creating modules/lua/Makefile
+config.status: creating modules/meta_engine/Makefile
+config.status: creating modules/misc/Makefile
+config.status: creating modules/media_library/Makefile
+config.status: creating modules/mux/Makefile
+config.status: creating modules/notify/Makefile
+config.status: creating modules/packetizer/Makefile
+config.status: creating modules/services_discovery/Makefile
+config.status: creating modules/stream_filter/Makefile
+config.status: creating modules/stream_out/Makefile
+config.status: creating modules/text_renderer/Makefile
+config.status: creating modules/video_chroma/Makefile
+config.status: creating modules/video_filter/Makefile
+config.status: creating modules/video_output/Makefile
+config.status: creating modules/visualization/Makefile
+config.status: creating modules/mmx/Makefile
+config.status: creating modules/sse2/Makefile
+config.status: creating modules/altivec/Makefile
+config.status: creating modules/arm_neon/Makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+
+libvlc configuration
+--------------------
+version               : 2.1.0-git
+system                : linux
+architecture          : arm
+optimizations         : yes
+build vlc executable  : no
+
+To build vlc and its plugins, type `make', or `./compile' if you like nice colors.
+Building
+make  all-recursive
+make[1]: 正在进入目录 `/home/sunlit/android/vlc/android'
+Making all in compat
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android/compat'
+make  all-am
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/compat'
+make[3]: 没有什么可以做的为 `all-am'。
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/compat'
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android/compat'
+Making all in doc
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android/doc'
+make[2]: 没有什么可以做的为 `all'。
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android/doc'
+Making all in po
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android/po'
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android/po'
+Making all in share
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android/share'
+  GEN    vlc.desktop
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android/share'
+Making all in src
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android/src'
+  GEN    stamp-revision
+make  all-am
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/src'
+  CC     libvlc.lo
+  CC     input/var.lo
+  CC     misc/exit.lo
+  CCLD   libvlccore.la
+copying selected object files to avoid basename conflicts...
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/src'
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android/src'
+Making all in modules
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android/modules'
+Making all in access
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/access'
+make  all-recursive
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/access'
+Making all in rtp
+make[5]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/access/rtp'
+make  all-am
+make[6]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/access/rtp'
+make[6]: 没有什么可以做的为 `all-am'。
+make[6]:正在离开目录 `/home/sunlit/android/vlc/android/modules/access/rtp'
+make[5]:正在离开目录 `/home/sunlit/android/vlc/android/modules/access/rtp'
+make[5]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/access'
+make[5]: 没有什么可以做的为 `all-am'。
+make[5]:正在离开目录 `/home/sunlit/android/vlc/android/modules/access'
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/access'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/access'
+Making all in audio_filter
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/audio_filter'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/audio_filter'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/audio_filter'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/audio_filter'
+Making all in audio_mixer
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/audio_mixer'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/audio_mixer'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/audio_mixer'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/audio_mixer'
+Making all in audio_output
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/audio_output'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/audio_output'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/audio_output'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/audio_output'
+Making all in codec
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/codec'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/codec'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/codec'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/codec'
+Making all in control
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/control'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/control'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/control'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/control'
+Making all in demux
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/demux'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/demux'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/demux'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/demux'
+Making all in gui
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui'
+make  all-recursive
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui'
+Making all in macosx
+make[5]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui/macosx'
+make  all-am
+make[6]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui/macosx'
+make[6]: 没有什么可以做的为 `all-am'。
+make[6]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui/macosx'
+make[5]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui/macosx'
+Making all in macosx_dialog_provider
+make[5]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui/macosx_dialog_provider'
+make  all-am
+make[6]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui/macosx_dialog_provider'
+make[6]: 没有什么可以做的为 `all-am'。
+make[6]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui/macosx_dialog_provider'
+make[5]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui/macosx_dialog_provider'
+Making all in minimal_macosx
+make[5]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui/minimal_macosx'
+make  all-am
+make[6]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui/minimal_macosx'
+make[6]: 没有什么可以做的为 `all-am'。
+make[6]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui/minimal_macosx'
+make[5]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui/minimal_macosx'
+make[5]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/gui'
+make[5]: 没有什么可以做的为 `all-am'。
+make[5]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui'
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/gui'
+Making all in meta_engine
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/meta_engine'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/meta_engine'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/meta_engine'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/meta_engine'
+Making all in misc
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/misc'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/misc'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/misc'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/misc'
+Making all in media_library
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/media_library'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/media_library'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/media_library'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/media_library'
+Making all in notify
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/notify'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/notify'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/notify'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/notify'
+Making all in packetizer
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/packetizer'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/packetizer'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/packetizer'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/packetizer'
+Making all in services_discovery
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/services_discovery'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/services_discovery'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/services_discovery'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/services_discovery'
+Making all in stream_filter
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/stream_filter'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/stream_filter'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/stream_filter'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/stream_filter'
+Making all in text_renderer
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/text_renderer'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/text_renderer'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/text_renderer'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/text_renderer'
+Making all in video_chroma
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/video_chroma'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/video_chroma'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/video_chroma'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/video_chroma'
+Making all in video_filter
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/video_filter'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/video_filter'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/video_filter'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/video_filter'
+Making all in video_output
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/video_output'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/video_output'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/video_output'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/video_output'
+Making all in visualization
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/visualization'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/visualization'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/visualization'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/visualization'
+Making all in access_output
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/access_output'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/access_output'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/access_output'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/access_output'
+Making all in mux
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/mux'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/mux'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/mux'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/mux'
+Making all in stream_out
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/stream_out'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/stream_out'
+  CC     libstream_out_record_plugin_la-record.lo
+  CCLD   libstream_out_record_plugin.la
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/stream_out'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/stream_out'
+Making all in arm_neon
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/arm_neon'
+make  all-am
+make[4]: 正在进入目录 `/home/sunlit/android/vlc/android/modules/arm_neon'
+make[4]: 没有什么可以做的为 `all-am'。
+make[4]:正在离开目录 `/home/sunlit/android/vlc/android/modules/arm_neon'
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules/arm_neon'
+Making all in .
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/modules'
+make[3]: 没有什么可以做的为 `all-am'。
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/modules'
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android/modules'
+Making all in lib
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android/lib'
+  GEN    ../include/vlc/libvlc_version.h
+config.status: creating src/../include/vlc/libvlc_version.h
+make  all-am
+make[3]: 正在进入目录 `/home/sunlit/android/vlc/android/lib'
+  CC     error.lo
+  CC     core.lo
+  CC     log.lo
+  CC     playlist.lo
+  CC     vlm.lo
+  CC     video.lo
+../../lib/vlm.c: In function 'recurse_answer':
+../../lib/vlm.c:289:17: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+../../lib/vlm.c:303:17: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  CC     audio.lo
+../../lib/vlm.c: In function 'libvlc_vlm_get_event_manager':
+../../lib/vlm.c:765:12: warning: variable 'p_vlm' set but not used [-Wunused-but-set-variable]
+../../lib/video.c: In function 'get_object':
+../../lib/video.c:657:9: warning: 'vlc_object_find_name' is deprecated (declared at ../../include/vlc_objects.h:51) [-Wdeprecated-declarations]
+  CC     event.lo
+../../lib/event.c: In function 'libvlc_event_detach':
+../../lib/event.c:418:10: warning: variable 'found' set but not used [-Wunused-but-set-variable]
+  CC     event_async.lo
+  CC     media.lo
+  CC     media_player.lo
+../../lib/media.c: In function 'media_parse':
+../../lib/media.c:594:2: warning: #warning FIXME: remove pl_Get [-Wcpp]
+../../lib/media_player.c: In function 'input_event_changed':
+../../lib/media_player.c:258:58: warning: unused parameter 'psz_cmd' [-Wunused-parameter]
+../../lib/media_player.c: In function 'libvlc_media_player_get_nsobject':
+../../lib/media_player.c:919:65: warning: unused parameter 'p_mi' [-Wunused-parameter]
+../../lib/media_player.c: In function 'libvlc_media_player_get_agl':
+../../lib/media_player.c:945:62: warning: unused parameter 'p_mi' [-Wunused-parameter]
+../../lib/media_player.c: In function 'libvlc_media_player_get_hwnd':
+../../lib/media_player.c:995:60: warning: unused parameter 'p_mi' [-Wunused-parameter]
+  CC     media_list.lo
+../../lib/media_list.c: In function 'libvlc_media_list_add_file_content':
+../../lib/media_list.c:270:2: warning: #warning Missing error handling! [-Wcpp]
+  CC     media_list_player.lo
+  CC     media_library.lo
+  CC     media_discoverer.lo
+  CCLD   libvlc.la
+make[3]:正在离开目录 `/home/sunlit/android/vlc/android/lib'
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android/lib'
+Making all in test
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android/test'
+make[2]: 没有什么可以做的为 `all'。
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android/test'
+make[2]: 正在进入目录 `/home/sunlit/android/vlc/android'
+  GEN    cvlc
+  GEN    rvlc
+make[2]:正在离开目录 `/home/sunlit/android/vlc/android'
+make[1]:正在离开目录 `/home/sunlit/android/vlc/android'
+Building Android
+cd vlc-android && rm -rf gen libs obj bin vlc-android/bin/VLC-debug.apk
+rm -rf java-libs/*/gen java-libs/*/bin
+rm -f android-libs/*.so android-libs/*.c
+rm -f vlc-android/obj/local/armeabi/libvlcjni.so vlc-android/obj/local/armeabi/libiomx-ics.so vlc-android/obj/local/armeabi/libiomx-hc.so vlc-android/obj/local/armeabi/libiomx-gingerbread.so  vlc-android/jni/libvlcjni.h
+Generating vlc-android/jni/libvlcjni.h
+Generating android-libs/libstagefright.c
+Generating android-libs/libstagefright.so
+Generating android-libs/libmedia.c
+Generating android-libs/libmedia.so
+Generating android-libs/libutils.c
+Generating android-libs/libutils.so
+Generating android-libs/libbinder.c
+Generating android-libs/libbinder.so
+
+=== Building libvlcjni ===
+
+make[1]: Entering directory `/home/sunlit/android/vlc-android'
+/home/sunlit/android-ndk-r8c/build/core/add-application.mk:128: Android NDK: WARNING: APP_PLATFORM android-9 is larger than android:minSdkVersion 7 in ./AndroidManifest.xml    
+Compile++ thumb  : iomx-gingerbread <= iomx.cpp
+StaticLibrary  : libstdc++.a
+SharedLibrary  : libiomx-gingerbread.so
+Install        : libiomx-gingerbread.so => libs/armeabi/libiomx-gingerbread.so
+Compile++ thumb  : iomx-hc <= iomx.cpp
+SharedLibrary  : libiomx-hc.so
+Install        : libiomx-hc.so => libs/armeabi/libiomx-hc.so
+Compile++ thumb  : iomx-ics <= iomx.cpp
+SharedLibrary  : libiomx-ics.so
+Install        : libiomx-ics.so => libs/armeabi/libiomx-ics.so
+Compile arm    : vlcjni <= libvlcjni.c
+In file included from jni/libvlcjni.c:30:0:
+.././vlc/include/vlc_common.h: In function 'vlc_memalign':
+.././vlc/include/vlc_common.h:832:5: warning: implicit declaration of function 'posix_memalign' [-Wimplicit-function-declaration]
+Compile arm    : vlcjni <= aout.c
+Compile arm    : vlcjni <= thumbnailer.c
+Compile arm    : vlcjni <= pthread-condattr.c
+Compile arm    : vlcjni <= pthread-rwlocks.c
+Compile arm    : vlcjni <= pthread-once.c
+Compile arm    : vlcjni <= eventfd.c
+Compile arm    : vlcjni <= sem.c
+Compile arm    : vlcjni <= pipe2.c
+Compile arm    : vlcjni <= wcpcpy.c
+Compile arm    : vlcjni <= wcpncpy.c
+Compile arm    : vlcjni <= wcscasecmp.c
+Compile arm    : vlcjni <= wcscat.c
+Compile arm    : vlcjni <= wcschr.c
+Compile arm    : vlcjni <= wcscmp.c
+Compile arm    : vlcjni <= wcscoll.c
+Compile arm    : vlcjni <= wcscpy.c
+Compile arm    : vlcjni <= wcscspn.c
+Compile arm    : vlcjni <= wcsdup.c
+Compile arm    : vlcjni <= wcslcat.c
+Compile arm    : vlcjni <= wcslcpy.c
+Compile arm    : vlcjni <= wcslen.c
+Compile arm    : vlcjni <= wcsncasecmp.c
+Compile arm    : vlcjni <= wcsncat.c
+Compile arm    : vlcjni <= wcsncmp.c
+Compile arm    : vlcjni <= wcsncpy.c
+Compile arm    : vlcjni <= wcsnlen.c
+Compile arm    : vlcjni <= wcspbrk.c
+Compile arm    : vlcjni <= wcsrchr.c
+Compile arm    : vlcjni <= wcsspn.c
+Compile arm    : vlcjni <= wcsstr.c
+Compile arm    : vlcjni <= wcstok.c
+Compile arm    : vlcjni <= wcswidth.c
+Compile arm    : vlcjni <= wcsxfrm.c
+Compile arm    : vlcjni <= wmemchr.c
+Compile arm    : vlcjni <= wmemcmp.c
+Compile arm    : vlcjni <= wmemcpy.c
+Compile arm    : vlcjni <= wmemmove.c
+Compile arm    : vlcjni <= wmemset.c
+SharedLibrary  : libvlcjni.so
+Install        : libvlcjni.so => libs/armeabi/libvlcjni.so
+make[1]: Leaving directory `/home/sunlit/android/vlc-android'
+
+=== Building vlc-android/bin/VLC-release-unsigned.apk for armeabi ===
+
+date +"%Y-%m-%d" > vlc-android/assets/builddate.txt
+echo `id -u -n`@`hostname` > vlc-android/assets/builder.txt
+git rev-parse --short HEAD > vlc-android/assets/revision.txt
+./gen-env.sh vlc-android
+Buildfile: /home/sunlit/android/vlc-android/build.xml
+
+-set-mode-check:
+
+-set-release-mode:
+     [echo] *************************************************
+     [echo] ****  Android Manifest has debuggable=true   ****
+     [echo] **** Doing DEBUG packaging with RELEASE keys ****
+     [echo] *************************************************
+
+-release-obfuscation-check:
+     [echo] proguard.config is ${proguard.config}
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 21
+ [checkenv] Installed at /home/sunlit/sdk
+
+-setup:
+     [echo] Project Name: VLC
+  [gettype] Project Type: Application
+
+-build-setup:
+     [echo] Resolving Build Target for VLC...
+[gettarget] Project Target:   Android 4.2
+[gettarget] API level:        17
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: /home/sunlit/android/vlc-android/bin
+    [mkdir] Created dir: /home/sunlit/android/vlc-android/bin/res
+    [mkdir] Created dir: /home/sunlit/android/vlc-android/gen
+    [mkdir] Created dir: /home/sunlit/android/vlc-android/bin/classes
+    [mkdir] Created dir: /home/sunlit/android/vlc-android/bin/dexedLibs
+     [echo] ----------
+     [echo] Resolving Dependencies for VLC...
+[dependency] Library dependencies:
+[dependency] 
+[dependency] ------------------
+[dependency] Ordered libraries:
+     [echo] ----------
+     [echo] Building Libraries with 'release'...
+
+nodeps:
+
+-set-mode-check:
+
+-set-release-mode:
+
+-release-obfuscation-check:
+     [echo] proguard.config is ${proguard.config}
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 21
+ [checkenv] Installed at /home/sunlit/sdk
+
+-setup:
+     [echo] Project Name: SlidingMenu
+  [gettype] Project Type: Android Library
+
+-build-setup:
+     [echo] Resolving Build Target for SlidingMenu...
+[gettarget] Project Target:   Android 4.2
+[gettarget] API level:        17
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: /home/sunlit/android/java-libs/SlidingMenu/bin
+    [mkdir] Created dir: /home/sunlit/android/java-libs/SlidingMenu/bin/res
+    [mkdir] Created dir: /home/sunlit/android/java-libs/SlidingMenu/gen
+    [mkdir] Created dir: /home/sunlit/android/java-libs/SlidingMenu/bin/classes
+    [mkdir] Created dir: /home/sunlit/android/java-libs/SlidingMenu/bin/dexedLibs
+     [echo] ----------
+     [echo] Resolving Dependencies for SlidingMenu...
+[dependency] Library dependencies:
+[dependency] No Libraries
+
+-pre-build:
+
+-code-gen:
+[mergemanifest] Merging AndroidManifest files into one.
+[mergemanifest] Manifest merger disabled. Using project manifest only.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+[renderscript] No RenderScript files to compile.
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] Generating resource IDs...
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] Generating BuildConfig class.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 12 source files to /home/sunlit/android/java-libs/SlidingMenu/bin/classes
+    [javac] 注意：/home/sunlit/android/java-libs/SlidingMenu/src/com/slidingmenu/lib/SlidingMenu.java 使用或覆盖了已过时的 API。
+    [javac] 注意：要了解详细信息，请使用 -Xlint:deprecation 重新编译。
+     [echo] Creating library output jar file...
+      [jar] Building jar: /home/sunlit/android/java-libs/SlidingMenu/bin/classes.jar
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+     [echo] Library project: do not convert bytecode...
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: /home/sunlit/android/java-libs/SlidingMenu/res
+   [crunch] To destination dir: /home/sunlit/android/java-libs/SlidingMenu/bin/res
+   [crunch] Crunched 0 PNG files to update cache
+
+-package-resources:
+     [echo] Library project: do not package resources...
+
+-package:
+     [echo] Library project: do not package apk...
+
+-post-package:
+
+-release-prompt-for-password:
+
+-release-nosign:
+     [echo] 
+[propertyfile] Creating new property file: /home/sunlit/android/java-libs/SlidingMenu/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/java-libs/SlidingMenu/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/java-libs/SlidingMenu/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/java-libs/SlidingMenu/bin/build.prop
+
+-release-sign:
+
+-post-build:
+
+release:
+
+nodeps:
+
+-set-mode-check:
+
+-set-release-mode:
+
+-release-obfuscation-check:
+     [echo] proguard.config is ${proguard.config}
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 21
+ [checkenv] Installed at /home/sunlit/sdk
+
+-setup:
+     [echo] Project Name: ActionBarSherlock
+  [gettype] Project Type: Android Library
+
+-build-setup:
+     [echo] Resolving Build Target for ActionBarSherlock...
+[gettarget] Project Target:   Android 4.2
+[gettarget] API level:        17
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: /home/sunlit/android/java-libs/ActionBarSherlock/bin
+    [mkdir] Created dir: /home/sunlit/android/java-libs/ActionBarSherlock/bin/res
+    [mkdir] Created dir: /home/sunlit/android/java-libs/ActionBarSherlock/gen
+    [mkdir] Created dir: /home/sunlit/android/java-libs/ActionBarSherlock/bin/classes
+    [mkdir] Created dir: /home/sunlit/android/java-libs/ActionBarSherlock/bin/dexedLibs
+     [echo] ----------
+     [echo] Resolving Dependencies for ActionBarSherlock...
+[dependency] Library dependencies:
+[dependency] No Libraries
+
+-pre-build:
+
+-code-gen:
+[mergemanifest] Merging AndroidManifest files into one.
+[mergemanifest] Manifest merger disabled. Using project manifest only.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+[renderscript] No RenderScript files to compile.
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] Generating resource IDs...
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] Generating BuildConfig class.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 82 source files to /home/sunlit/android/java-libs/ActionBarSherlock/bin/classes
+    [javac] 注意：某些输入文件使用或覆盖了已过时的 API。
+    [javac] 注意：要了解详细信息，请使用 -Xlint:deprecation 重新编译。
+     [echo] Creating library output jar file...
+      [jar] Building jar: /home/sunlit/android/java-libs/ActionBarSherlock/bin/classes.jar
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+     [echo] Library project: do not convert bytecode...
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: /home/sunlit/android/java-libs/ActionBarSherlock/res
+   [crunch] To destination dir: /home/sunlit/android/java-libs/ActionBarSherlock/bin/res
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_bottom_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_bottom_solid_inverse_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_solid_inverse_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_solid_inverse_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_bottom_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_bottom_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_bottom_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_bottom_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_share_pack_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_share_pack_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_share_pack_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_share_pack_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_share_pack_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_share_pack_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_solid_shadow_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_solid_shadow_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_solid_shadow_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_stacked_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_stacked_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_stacked_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_stacked_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_stacked_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_stacked_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_stacked_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_stacked_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_stacked_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_stacked_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_stacked_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_stacked_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ab_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ab_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__btn_cab_done_default_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_default_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_default_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__btn_cab_done_default_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_default_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_default_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__btn_cab_done_focused_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_focused_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_focused_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__btn_cab_done_focused_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_focused_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_focused_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__btn_cab_done_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__btn_cab_done_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__btn_cab_done_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__cab_background_bottom_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__cab_background_bottom_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__cab_background_bottom_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__cab_background_bottom_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__cab_background_top_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__cab_background_top_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__cab_background_top_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__cab_background_top_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__cab_background_top_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__cab_background_top_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__dialog_full_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__dialog_full_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__dialog_full_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__dialog_full_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__dialog_full_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__dialog_full_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ic_ab_back_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_ab_back_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_ab_back_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ic_ab_back_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_ab_back_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_ab_back_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ic_cab_done_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_cab_done_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_cab_done_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ic_cab_done_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_cab_done_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_cab_done_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_menu_moreoverflow_normal_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ic_menu_share_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_menu_share_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_menu_share_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__ic_menu_share_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_menu_share_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__ic_menu_share_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_activated_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_activated_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_activated_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_divider_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_divider_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_divider_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_divider_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_divider_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_divider_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_focused_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_focused_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_focused_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_longpressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_longpressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_longpressed_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_selector_disabled_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_selector_disabled_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_selector_disabled_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__list_selector_disabled_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__menu_dropdown_panel_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__menu_dropdown_panel_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__menu_dropdown_panel_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__menu_dropdown_panel_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__menu_dropdown_panel_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__menu_dropdown_panel_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__progress_bg_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_bg_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_bg_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__progress_bg_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_bg_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_bg_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__progress_primary_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_primary_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_primary_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__progress_primary_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_primary_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_primary_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__progress_secondary_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_secondary_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_secondary_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__progress_secondary_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_secondary_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__progress_secondary_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_48_inner_holo.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_48_inner_holo.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_48_inner_holo.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_48_outer_holo.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_48_outer_holo.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_48_outer_holo.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_default_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_ab_default_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_default_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_default_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_ab_disabled_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_disabled_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_disabled_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_ab_disabled_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_disabled_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_disabled_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_ab_focused_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_focused_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_focused_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_ab_focused_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_focused_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_focused_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_ab_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__spinner_ab_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__spinner_ab_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__tab_selected_focused_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__tab_selected_focused_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__tab_selected_focused_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__tab_selected_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__tab_selected_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__tab_selected_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__tab_selected_pressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__tab_selected_pressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__tab_selected_pressed_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-hdpi/abs__tab_unselected_pressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__tab_unselected_pressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-hdpi/abs__tab_unselected_pressed_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_bottom_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_solid_inverse_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_bottom_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_bottom_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_share_pack_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_share_pack_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_share_pack_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_share_pack_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_share_pack_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_share_pack_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_solid_shadow_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_solid_shadow_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_solid_shadow_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_stacked_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_stacked_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_stacked_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_stacked_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_stacked_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_stacked_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_stacked_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_stacked_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_stacked_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_stacked_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_stacked_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_stacked_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ab_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ab_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_default_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_default_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__btn_cab_done_focused_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_focused_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_focused_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__btn_cab_done_focused_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_focused_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_focused_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__btn_cab_done_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__btn_cab_done_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__btn_cab_done_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__cab_background_bottom_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__cab_background_bottom_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__cab_background_top_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__cab_background_top_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__cab_background_top_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__cab_background_top_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__cab_background_top_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__cab_background_top_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__dialog_full_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__dialog_full_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__dialog_full_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__dialog_full_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__dialog_full_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__dialog_full_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ic_ab_back_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_ab_back_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_ab_back_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ic_ab_back_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_ab_back_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_ab_back_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ic_cab_done_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_cab_done_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_cab_done_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ic_cab_done_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_cab_done_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_cab_done_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_menu_moreoverflow_normal_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ic_menu_share_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_menu_share_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_menu_share_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__ic_menu_share_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_menu_share_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__ic_menu_share_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_activated_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_activated_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_activated_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_divider_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_divider_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_divider_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_divider_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_divider_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_divider_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_focused_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_focused_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_focused_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_longpressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_longpressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_longpressed_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_selector_disabled_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_selector_disabled_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_selector_disabled_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__list_selector_disabled_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__menu_dropdown_panel_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__menu_dropdown_panel_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__menu_dropdown_panel_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__menu_dropdown_panel_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__menu_dropdown_panel_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__menu_dropdown_panel_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__progress_bg_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_bg_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_bg_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__progress_bg_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_bg_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_bg_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__progress_primary_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_primary_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_primary_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__progress_primary_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_primary_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_primary_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__progress_secondary_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_secondary_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_secondary_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__progress_secondary_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_secondary_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__progress_secondary_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_48_inner_holo.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_48_inner_holo.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_48_inner_holo.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_48_outer_holo.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_48_outer_holo.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_48_outer_holo.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_ab_default_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_default_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_default_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_default_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_ab_disabled_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_disabled_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_disabled_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_disabled_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_ab_focused_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_focused_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_focused_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_focused_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__spinner_ab_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__spinner_ab_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__tab_selected_focused_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__tab_selected_focused_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__tab_selected_focused_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__tab_selected_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__tab_selected_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__tab_selected_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__tab_selected_pressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__tab_selected_pressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__tab_selected_pressed_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-mdpi/abs__tab_unselected_pressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__tab_unselected_pressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-mdpi/abs__tab_unselected_pressed_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_bottom_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_bottom_solid_inverse_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_solid_inverse_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_solid_inverse_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_bottom_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_bottom_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_bottom_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_share_pack_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_share_pack_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_share_pack_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_share_pack_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_share_pack_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_share_pack_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_solid_shadow_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_solid_shadow_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_solid_shadow_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_stacked_solid_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_stacked_solid_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_stacked_solid_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_stacked_solid_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_stacked_solid_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_stacked_solid_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_stacked_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_stacked_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_stacked_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_stacked_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_transparent_dark_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_transparent_dark_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_transparent_dark_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ab_transparent_light_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_transparent_light_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ab_transparent_light_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__btn_cab_done_default_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_default_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_default_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__btn_cab_done_default_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_default_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_default_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__btn_cab_done_focused_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_focused_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_focused_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__btn_cab_done_focused_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_focused_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_focused_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__btn_cab_done_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__cab_background_bottom_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__cab_background_bottom_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__cab_background_bottom_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__cab_background_bottom_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__cab_background_top_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__cab_background_top_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__cab_background_top_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__cab_background_top_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__cab_background_top_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__cab_background_top_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__dialog_full_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__dialog_full_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__dialog_full_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__dialog_full_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ic_ab_back_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_ab_back_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_ab_back_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ic_ab_back_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_ab_back_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_ab_back_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_cab_done_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ic_cab_done_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_cab_done_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_cab_done_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_menu_moreoverflow_normal_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ic_menu_share_holo_dark.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_menu_share_holo_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_menu_share_holo_dark.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__ic_menu_share_holo_light.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_menu_share_holo_light.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__ic_menu_share_holo_light.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_activated_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_activated_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_activated_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_divider_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_divider_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_divider_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_divider_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_divider_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_divider_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_focused_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_focused_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_focused_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_longpressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_longpressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_longpressed_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_selector_disabled_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_selector_disabled_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_selector_disabled_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__list_selector_disabled_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_selector_disabled_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__list_selector_disabled_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__menu_dropdown_panel_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__menu_dropdown_panel_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__menu_dropdown_panel_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__menu_dropdown_panel_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__progress_bg_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_bg_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_bg_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__progress_bg_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_bg_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_bg_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__progress_primary_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_primary_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_primary_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__progress_primary_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_primary_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_primary_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__progress_secondary_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_secondary_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_secondary_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__progress_secondary_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_48_inner_holo.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_48_inner_holo.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_48_inner_holo.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_48_outer_holo.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_48_outer_holo.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_48_outer_holo.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_ab_default_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_default_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_default_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_ab_default_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_default_holo_light.9.png
+   [crunch]   
+   [crunch] (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_default_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_ab_disabled_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_disabled_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_disabled_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_disabled_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_focused_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_ab_focused_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_focused_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_focused_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_ab_pressed_holo_dark.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_pressed_holo_dark.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_pressed_holo_dark.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__spinner_ab_pressed_holo_light.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_pressed_holo_light.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__spinner_ab_pressed_holo_light.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__tab_selected_focused_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__tab_selected_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__tab_selected_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__tab_selected_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__tab_selected_pressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__tab_selected_pressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__tab_selected_pressed_holo.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/java-libs/ActionBarSherlock/res/drawable-xhdpi/abs__tab_unselected_pressed_holo.9.png => /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__tab_unselected_pressed_holo.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/java-libs/ActionBarSherlock/bin/res/drawable-xhdpi/abs__tab_unselected_pressed_holo.9.png: 0% size of source)
+   [crunch] Crunched 201 PNG files to update cache
+
+-package-resources:
+     [echo] Library project: do not package resources...
+
+-package:
+     [echo] Library project: do not package apk...
+
+-post-package:
+
+-release-prompt-for-password:
+
+-release-nosign:
+     [echo] 
+[propertyfile] Creating new property file: /home/sunlit/android/java-libs/ActionBarSherlock/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/java-libs/ActionBarSherlock/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/java-libs/ActionBarSherlock/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/java-libs/ActionBarSherlock/bin/build.prop
+
+-release-sign:
+
+-post-build:
+
+release:
+
+-pre-build:
+
+-code-gen:
+[mergemanifest] Merging AndroidManifest files into one.
+[mergemanifest] Manifest merger disabled. Using project manifest only.
+     [echo] Handling aidl files...
+     [aidl] Found 2 AIDL files.
+     [aidl] Compiling 2 AIDL files.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+[renderscript] No RenderScript files to compile.
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] Generating resource IDs...
+     [aapt] aapt: warning: string 'close' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'external_mount' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: es
+     [aapt] aapt: warning: string 'filebrowser_parent' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: eu hr mr te uk wa
+     [aapt] aapt: warning: string 'filebrowser_root' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'filebrowser_sdfail' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'for_android' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'hide_mini_player' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'lock_rotation' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: bn_IN es et he ko pt_BR
+     [aapt] aapt: warning: string 'media_library' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'ml_no_media_dir' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'search_found_results' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: eu hr mr te uk wa
+     [aapt] aapt: warning: string 'show_player' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'version' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] Generating BuildConfig class.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 72 source files to /home/sunlit/android/vlc-android/bin/classes
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+      [dex] input: /home/sunlit/android/vlc-android/bin/classes
+      [dex] input: /home/sunlit/android/java-libs/ActionBarSherlock/bin/classes.jar
+      [dex] input: /home/sunlit/android/java-libs/SlidingMenu/bin/classes.jar
+      [dex] input: /home/sunlit/android/java-libs/ActionBarSherlock/libs/android-support-v4.jar
+      [dex] Pre-Dexing /home/sunlit/android/java-libs/ActionBarSherlock/bin/classes.jar -> classes-0ab9a63b001f97ccca990ebc1b99fe3a.jar
+      [dex] Pre-Dexing /home/sunlit/android/java-libs/SlidingMenu/bin/classes.jar -> classes-4f00041918b0178f8395acf1202fe91f.jar
+      [dex] Pre-Dexing /home/sunlit/android/java-libs/ActionBarSherlock/libs/android-support-v4.jar -> android-support-v4-8702c6c55b14eca01a3984e26321721c.jar
+      [dex] Converting compiled files and external libraries into /home/sunlit/android/vlc-android/bin/classes.dex...
+       [dx] Merged dex A (232 defs/316.7KiB) with dex B (215 defs/352.1KiB). Result is 447 defs/815.6KiB. Took 2.7s
+       [dx] Merged dex A (447 defs/815.6KiB) with dex B (31 defs/45.0KiB). Result is 478 defs/1102.9KiB. Took 1.2s
+       [dx] Merged dex A (478 defs/1102.9KiB) with dex B (283 defs/316.3KiB). Result is 761 defs/1917.3KiB. Took 0.8s
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: /home/sunlit/android/vlc-android/res
+   [crunch] To destination dir: /home/sunlit/android/vlc-android/bin/res
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/actionbar_shadow.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/actionbar_shadow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/actionbar_shadow.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/dropdown_ic_arrow_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/dropdown_ic_arrow_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/dropdown_ic_arrow_glow.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/dropdown_ic_arrow_normal.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/dropdown_ic_arrow_normal.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/dropdown_ic_arrow_normal.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/ic_bookmarks.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_bookmarks.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_bookmarks.png: 71% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/ic_folder.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_folder.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_folder.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/ic_menu_archive.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_archive.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_archive.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/ic_menu_goto.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_goto.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_goto.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/ic_menu_refresh.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_refresh.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_refresh.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/ic_menu_revert.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_revert.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_revert.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/ic_menu_search.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_search.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/ic_menu_search.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/icon.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/icon.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/icon.png: 81% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/slidingmenu_shadow.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/slidingmenu_shadow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/slidingmenu_shadow.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/wheel_pause.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/wheel_pause.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/wheel_pause.png: 40% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-hdpi/wheel_play.png => /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/wheel_play.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-hdpi/wheel_play.png: 40% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-ldpi/ic_bookmarks.png => /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_bookmarks.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_bookmarks.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-ldpi/ic_menu_archive.png => /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_archive.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_archive.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-ldpi/ic_menu_goto.png => /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_goto.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_goto.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-ldpi/ic_menu_refresh.png => /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_refresh.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_refresh.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-ldpi/ic_menu_revert.png => /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_revert.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_revert.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-ldpi/ic_menu_search.png => /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_search.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/ic_menu_search.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-ldpi/icon.png => /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/icon.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-ldpi/icon.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-mdpi/ic_menu_archive.png => /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_archive.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_archive.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-mdpi/ic_menu_goto.png => /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_goto.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_goto.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-mdpi/ic_menu_refresh.png => /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_refresh.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_refresh.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-mdpi/ic_menu_revert.png => /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_revert.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_revert.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-mdpi/ic_menu_search.png => /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_search.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/ic_menu_search.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-mdpi/icon.png => /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/icon.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-mdpi/icon.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-xhdpi/ic_bookmarks.png => /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_bookmarks.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_bookmarks.png: 94% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-xhdpi/ic_menu_archive.png => /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_archive.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_archive.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-xhdpi/ic_menu_goto.png => /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_goto.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_goto.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-xhdpi/ic_menu_refresh.png => /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_refresh.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_refresh.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-xhdpi/ic_menu_revert.png => /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_revert.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_revert.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-xhdpi/ic_menu_search.png => /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_search.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/ic_menu_search.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable-xhdpi/icon.png => /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/icon.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable-xhdpi/icon.png: 55% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/background_pattern_dark.png => /home/sunlit/android/vlc-android/bin/res/drawable/background_pattern_dark.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/background_pattern_dark.png: 90% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/bg_with_shadow.9.png => /home/sunlit/android/vlc-android/bin/res/drawable/bg_with_shadow.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/bg_with_shadow.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/cone.png => /home/sunlit/android/vlc-android/bin/res/drawable/cone.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/cone.png: 99% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/dots.png => /home/sunlit/android/vlc-android/bin/res/drawable/dots.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/dots.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/dropshadow.9.png => /home/sunlit/android/vlc-android/bin/res/drawable/dropshadow.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/dropshadow.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header.png => /home/sunlit/android/vlc-android/bin/res/drawable/header.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header_button_focused.png => /home/sunlit/android/vlc-android/bin/res/drawable/header_button_focused.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header_button_focused.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header_button_normal.png => /home/sunlit/android/vlc-android/bin/res/drawable/header_button_normal.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header_button_normal.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header_button_pressed.png => /home/sunlit/android/vlc-android/bin/res/drawable/header_button_pressed.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header_button_pressed.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header_icon_audio.png => /home/sunlit/android/vlc-android/bin/res/drawable/header_icon_audio.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header_icon_audio.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header_icon_loupe.png => /home/sunlit/android/vlc-android/bin/res/drawable/header_icon_loupe.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header_icon_loupe.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header_icon_subtitle.png => /home/sunlit/android/vlc-android/bin/res/drawable/header_icon_subtitle.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header_icon_subtitle.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header_icon_video.png => /home/sunlit/android/vlc-android/bin/res/drawable/header_icon_video.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header_icon_video.png: 52% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/header_logo.png => /home/sunlit/android/vlc-android/bin/res/drawable/header_logo.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/header_logo.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_backward_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_backward_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_backward_glow.png: 58% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_backward_normal.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_backward_normal.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_backward_normal.png: 58% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_bookmarks.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_bookmarks.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_bookmarks.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_down.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_down.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_down.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_folder.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_folder.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_folder.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_forward_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_forward_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_forward_glow.png: 61% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_forward_normal.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_forward_normal.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_forward_normal.png: 59% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_lock.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_lock.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_lock.png: 53% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_lock_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_lock_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_lock_glow.png: 41% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_next.9.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_next.9.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_next.9.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_pause_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_pause_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_pause_glow.png: 44% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_pause_normal.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_pause_normal.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_pause_normal.png: 65% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_play_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_play_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_play_glow.png: 42% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_play_normal.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_play_normal.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_play_normal.png: 45% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_repeat.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_repeat.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_repeat.png: 89% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_repeat_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_repeat_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_repeat_glow.png: 99% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_repeat_one.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_repeat_one.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_repeat_one.png: 55% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_seekbar_thumb.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_seekbar_thumb.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_seekbar_thumb.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_shuffle.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_shuffle.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_shuffle.png: 65% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_shuffle_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_shuffle_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_shuffle_glow.png: 73% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_size_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_size_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_size_glow.png: 40% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_size_normal.png => /home/sunlit/android/vlc-android/bin/res/dr
+   [crunch] awable/ic_size_normal.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_size_normal.png: 90% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_stop_glow.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_stop_glow.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_stop_glow.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_stop_normal.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_stop_normal.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_stop_normal.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/ic_up.png => /home/sunlit/android/vlc-android/bin/res/drawable/ic_up.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/ic_up.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/icon.png => /home/sunlit/android/vlc-android/bin/res/drawable/icon.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/icon.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/sleep.png => /home/sunlit/android/vlc-android/bin/res/drawable/sleep.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/sleep.png: 93% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/sleep_cancel.png => /home/sunlit/android/vlc-android/bin/res/drawable/sleep_cancel.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/sleep_cancel.png: 54% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/spacer.png => /home/sunlit/android/vlc-android/bin/res/drawable/spacer.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/spacer.png: 0% size of source)
+   [crunch] Processing image to cache: /home/sunlit/android/vlc-android/res/drawable/thumbnail.png => /home/sunlit/android/vlc-android/bin/res/drawable/thumbnail.png
+   [crunch]   (processed image to cache entry /home/sunlit/android/vlc-android/bin/res/drawable/thumbnail.png: 0% size of source)
+   [crunch] Crunched 78 PNG files to update cache
+
+-package-resources:
+     [aapt] Creating full resource package...
+     [aapt]     (skipping file '.gitignore' due to ANDROID_AAPT_IGNORE pattern '.*')
+     [aapt] Warning: AndroidManifest.xml already defines debuggable (in http://schemas.android.com/apk/res/android); using existing value in manifest.
+     [aapt] aapt: warning: string 'close' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'external_mount' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: es
+     [aapt] aapt: warning: string 'filebrowser_parent' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: eu hr mr te uk wa
+     [aapt] aapt: warning: string 'filebrowser_root' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'filebrowser_sdfail' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'for_android' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'hide_mini_player' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'lock_rotation' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: bn_IN es et he ko pt_BR
+     [aapt] aapt: warning: string 'media_library' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'ml_no_media_dir' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'search_found_results' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: eu hr mr te uk wa
+     [aapt] aapt: warning: string 'show_player' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+     [aapt] aapt: warning: string 'version' has no default translation in /home/sunlit/android/java-libs/SlidingMenu/res; found: ar bn_IN es et eu he hi hr ko mr pt_BR te uk wa
+
+-package:
+[apkbuilder] Current build type is different than previous build: forced apkbuilder run.
+[apkbuilder] Creating VLC-release-unsigned.apk for release...
+
+-post-package:
+
+-release-prompt-for-password:
+
+-release-nosign:
+     [echo] No key.store and key.alias properties found in build.properties.
+     [echo] Please sign /home/sunlit/android/vlc-android/bin/VLC-release-unsigned.apk manually
+     [echo] and run zipalign from the Android SDK tools.
+[propertyfile] Creating new property file: /home/sunlit/android/vlc-android/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/vlc-android/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/vlc-android/bin/build.prop
+[propertyfile] Updating property file: /home/sunlit/android/vlc-android/bin/build.prop
+
+-release-sign:
+
+-post-build:
+
+release:
+
+BUILD SUCCESSFUL
+Total time: 2 minutes 1 second
+rm android-libs/libmedia.c android-libs/libutils.c android-libs/libstagefright.c android-libs/libbinder.c
+Generating environment script.
+This is a script that will export many of the variables used in this
+script. It will allow you to compile parts of the build without having
+to rebuild the entire build (e.g. recompile only the Java part).
+
+To use it, include the script into your shell, like this:
+    source env.sh
+
+Now, you can use this command to build the Java portion:
+    make -e
+
+The file will be automatically regenerated by compile.sh, so if you change
+your NDK/SDK locations or any build configurations, just re-run this
+script (sh compile.sh) and it will automatically update the file.
+

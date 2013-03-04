@@ -99,7 +99,6 @@ sh $VLC_SOURCEDIR/configure --host=$TARGET_TUPLE --build=x86_64-unknown-linux $E
                 --disable-egl \
                 --disable-goom \
                 --disable-projectm \
-                --disable-sout \
                 --disable-vorbis \
                 --disable-faad \
                 --disable-x264 \

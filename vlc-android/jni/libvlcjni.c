@@ -407,14 +407,11 @@ void Java_org_videolan_vlc_LibVLC_nativeInit(JNIEnv *env, jobject thiz, jboolean
     methodId = (*env)->GetMethodID(env, cls, "timeStretchingEnabled", "()Z");
     bool enable_time_stretch = (*env)->CallBooleanMethod(env, thiz, methodId);
 
-    methodId = (*env)->GetMethodID(env, cls, "yv12Enabled", "()Z");
-    bool yv12enabled = (*env)->CallBooleanMethod(env, thiz, methodId);
-
     methodId = (*env)->GetMethodID(env, cls, "getSubtitlesEncoding", "()Ljava/lang/String;");
     jstring subsencoding = (*env)->CallObjectMethod(env, thiz, methodId);
     const char *subsencodingstr = (*env)->GetStringUTFChars(env, subsencoding, 0);
 
-    LOGD("Subtitle encoding set to \"%s\"", subsencodingstr);
+    LOGD("Subtitles encoding sets to: %s", subsencodingstr);
 
     verbosity = verbose;
     libvlc_log_subscribe(&debug_subscriber, debug_log, &verbosity);
@@ -432,7 +429,6 @@ void Java_org_videolan_vlc_LibVLC_nativeInit(JNIEnv *env, jobject thiz, jboolean
         "--subsdec-encoding", subsencodingstr,
         enable_time_stretch ? "--audio-time-stretch" : "--no-audio-time-stretch",
         use_opensles ? "--aout=opensles" : "--aout=android_audiotrack",
-        yv12enabled ? "--androidsurface-chroma=YV12" : "--androidsurface-chroma=RV32",
     };
     libvlc_instance_t *instance = libvlc_new(sizeof(argv) / sizeof(*argv), argv);
 
@@ -1184,4 +1180,75 @@ jboolean Java_org_videolan_vlc_LibVLC_nativeIsPathDirectory(JNIEnv *env, jobject
 
     (*env)->ReleaseStringUTFChars(env, path, psz_path);
     return isDirectory;
+}
+
+jboolean Java_org_videolan_vlc_LibVLC_takeSnapShot(JNIEnv *env, jobject thiz,jint number, jstring path, jint width,jint height)
+{
+    jboolean isCopy;
+   libvlc_media_player_t *mp = getMediaPlayer(env, thiz);
+     /* Get C string */
+   const char* psz_path = (*env)->GetStringUTFChars(env, path, &isCopy);
+
+   if (mp)
+        if(libvlc_video_take_snapshot(mp, (int)number,psz_path , (int)width,(int)height)==0)
+            return JNI_TRUE;
+   return JNI_FALSE;
+
+}
+
+jboolean Java_org_videolan_vlc_LibVLC_videoRecord(JNIEnv *env, jobject thiz,jstring path,jstring filename,jboolean set)
+{
+    jboolean isCopy;
+   libvlc_media_player_t *mp = getMediaPlayer(env, thiz);
+     /* Get C string */
+   const char* psz_path = (*env)->GetStringUTFChars(env, path, &isCopy);
+   const char* psz_filename=(*env)->GetStringUTFChars(env, filename, &isCopy);
+   if (mp)
+        if(libvlc_video_toggle_record(mp,psz_path,psz_filename,set)==0)
+            return JNI_TRUE;
+   return JNI_FALSE;
+
+}
+
+jboolean Java_org_videolan_vlc_LibVLC_videoRecordStart(JNIEnv *env, jobject thiz,jstring path)
+{
+    jboolean isCopy;
+   libvlc_media_player_t *mp = getMediaPlayer(env, thiz);
+     /* Get C string */
+   const char* psz_path = (*env)->GetStringUTFChars(env, path, &isCopy);
+   //const char* psz_filename=(*env)->GetStringUTFChars(env, filename, &isCopy);
+   if (mp)
+        if(libvlc_media_player_record_start(mp,psz_path)==0)
+            return JNI_TRUE;
+   return JNI_FALSE;
+}
+
+jboolean Java_org_videolan_vlc_LibVLC_videoRecordStop(JNIEnv *env, jobject thiz)
+{
+    jboolean isCopy;
+   libvlc_media_player_t *mp = getMediaPlayer(env, thiz);
+     /* Get C string */
+   if (mp)
+        if(libvlc_media_player_record_stop(mp)==0)
+            return JNI_TRUE;
+   return JNI_FALSE;
+}
+
+jboolean Java_org_videolan_vlc_LibVLC_videoIsRecording(JNIEnv *env, jobject thiz)
+{
+    jboolean isCopy;
+   libvlc_media_player_t *mp = getMediaPlayer(env, thiz);
+   if (mp)
+        if(libvlc_media_player_is_recording(mp))
+            return JNI_TRUE;
+   return JNI_FALSE;
+}
+jboolean Java_org_videolan_vlc_LibVLC_videoIsRecordable(JNIEnv *env, jobject thiz)
+{
+    jboolean isCopy;
+   libvlc_media_player_t *mp = getMediaPlayer(env, thiz);
+   if (mp)
+        if(libvlc_media_player_is_recordable(mp))
+            return JNI_TRUE;
+   return JNI_FALSE;
 }
