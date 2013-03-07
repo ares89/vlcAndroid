@@ -1252,3 +1252,14 @@ jboolean Java_org_videolan_vlc_LibVLC_videoIsRecordable(JNIEnv *env, jobject thi
             return JNI_TRUE;
    return JNI_FALSE;
 }
+
+jint Java_org_videolan_vlc_LibVLC_getState(JNIEnv *env, jobject thiz)
+{
+    libvlc_media_list_player_t *mp = getMediaListPlayer(env, thiz);
+    if (mp){
+        libvlc_state_t state=libvlc_media_list_player_get_state(mp);
+        return (jint)state;
+    }
+    else
+        return -1;
+}
