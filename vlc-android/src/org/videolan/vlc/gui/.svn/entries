@@ -1,0 +1,175 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/vlc-android/src/org/videolan/vlc/gui
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+audio
+dir
+
+
+
+add
+
+AboutLicenceFragment.java
+file
+
+
+
+add
+
+SearchActivity.java
+file
+
+
+
+add
+
+expandable
+dir
+
+
+
+add
+
+DirectoryViewFragment.java
+file
+
+
+
+add
+
+BrowserAdapter.java
+file
+
+
+
+add
+
+HistoryFragment.java
+file
+
+
+
+add
+
+video
+dir
+
+
+
+add
+
+AboutActivity.java
+file
+
+
+
+add
+
+SearchHistoryAdapter.java
+file
+
+
+
+add
+
+CommonDialogs.java
+file
+
+
+
+add
+
+BrowserActivity.java
+file
+
+
+
+add
+
+MainActivity.java
+file
+
+
+
+add
+
+HistoryAdapter.java
+file
+
+
+
+add
+
+AboutMainFragment.java
+file
+
+
+
+add
+
+DebugLogActivity.java
+file
+
+
+
+add
+
+DirectoryAdapter.java
+file
+
+
+
+add
+
+SearchResultAdapter.java
+file
+
+
+
+add
+
+CompatErrorActivity.java
+file
+
+
+
+add
+
+SidebarAdapter.java
+file
+
+
+
+add
+
+PreferencesActivity.java
+file
+
+
+
+add
+

@@ -1,0 +1,322 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/vlc-android/res/layout
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+expandable_time_sleep.xml
+file
+
+
+
+add
+
+sidebar.xml
+file
+
+
+
+add
+
+about.xml
+file
+
+
+
+add
+
+player_contol_classic.xml
+file
+
+
+
+add
+
+video_grid.xml
+file
+
+
+
+add
+
+audio_player.xml
+file
+
+
+
+add
+
+expandable_jump_to_time.xml
+file
+
+
+
+add
+
+video_list_item.xml
+file
+
+
+
+add
+
+audio_browser_item.xml
+file
+
+
+
+add
+
+browser.xml
+file
+
+
+
+add
+
+audio_browser_playlist.xml
+file
+
+
+
+add
+
+notification.xml
+file
+
+
+
+add
+
+sidebar_item.xml
+file
+
+
+
+add
+
+vlcwidget.xml
+file
+
+
+
+add
+
+audio_browser_playlist_child.xml
+file
+
+
+
+add
+
+video_grid_item.xml
+file
+
+
+
+add
+
+audio_player_qvga.xml
+file
+
+
+
+add
+
+audio_list.xml
+file
+
+
+
+add
+
+player.xml
+file
+
+
+
+add
+
+player_contol_wheel.xml
+file
+
+
+
+add
+
+notification_expanded.xml
+file
+
+
+
+add
+
+not_compatible.xml
+file
+
+
+
+add
+
+expandable_layout.xml
+file
+
+
+
+add
+
+browser_item.xml
+file
+
+
+
+add
+
+audio_browser.xml
+file
+
+
+
+add
+
+search.xml
+file
+
+
+
+add
+
+info_dialog.xml
+file
+
+
+
+add
+
+directory_view_item.xml
+file
+
+
+
+add
+
+sliding_menu.xml
+file
+
+
+
+add
+
+about_main.xml
+file
+
+
+
+add
+
+advanced_options.xml
+file
+
+
+
+add
+
+list_header.xml
+file
+
+
+
+add
+
+expandable_speed_selector.xml
+file
+
+
+
+add
+
+main.xml
+file
+
+
+
+add
+
+debug_log.xml
+file
+
+
+
+add
+
+audio_player_mini.xml
+file
+
+
+
+add
+
+media_info.xml
+file
+
+
+
+add
+
+history_list.xml
+file
+
+
+
+add
+
+about_licence.xml
+file
+
+
+
+add
+
+directory_view.xml
+file
+
+
+
+add
+
+preferences.xml
+file
+
+
+
+add
+
+video_list.xml
+file
+
+
+
+add
+

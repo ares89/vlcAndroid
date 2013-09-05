@@ -1,0 +1,238 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-gingerbread/frameworks/base/include/media/stagefright
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+MediaDefs.h
+file
+
+
+
+add
+
+openmax
+dir
+
+
+
+add
+
+StagefrightMediaScanner.h
+file
+
+
+
+add
+
+AudioSource.h
+file
+
+
+
+add
+
+MediaDebug.h
+file
+
+
+
+add
+
+MediaBufferGroup.h
+file
+
+
+
+add
+
+HardwareAPI.h
+file
+
+
+
+add
+
+DataSource.h
+file
+
+
+
+add
+
+VideoRenderer.h
+file
+
+
+
+add
+
+ShoutcastSource.h
+file
+
+
+
+add
+
+FileSource.h
+file
+
+
+
+add
+
+MediaSource.h
+file
+
+
+
+add
+
+Utils.h
+file
+
+
+
+add
+
+OMXCodec.h
+file
+
+
+
+add
+
+OMXClient.h
+file
+
+
+
+add
+
+JPEGSource.h
+file
+
+
+
+add
+
+ColorConverter.h
+file
+
+
+
+add
+
+MediaBuffer.h
+file
+
+
+
+add
+
+CameraSource.h
+file
+
+
+
+add
+
+MPEG4Writer.h
+file
+
+
+
+add
+
+MediaExtractor.h
+file
+
+
+
+add
+
+AMRWriter.h
+file
+
+
+
+add
+
+MediaErrors.h
+file
+
+
+
+add
+
+MediaWriter.h
+file
+
+
+
+add
+
+OMXPluginBase.h
+file
+
+
+
+add
+
+MPEG2TSWriter.h
+file
+
+
+
+add
+
+AudioPlayer.h
+file
+
+
+
+add
+
+TimeSource.h
+file
+
+
+
+add
+
+MetaData.h
+file
+
+
+
+add
+
+foundation
+dir
+
+
+
+add
+

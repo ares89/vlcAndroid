@@ -1,0 +1,77 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/vlc-android/src/org/videolan/libvlc
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+Aout.java
+file
+
+
+
+add
+
+LibVlcUtil.java
+file
+
+
+
+add
+
+LibVlcException.java
+file
+
+
+
+add
+
+LibVLC.java
+file
+
+
+
+add
+
+IVideoPlayer.java
+file
+
+
+
+add
+
+EventHandler.java
+file
+
+
+
+add
+
+TrackInfo.java
+file
+
+
+
+add
+

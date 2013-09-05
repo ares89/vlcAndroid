@@ -1,0 +1,84 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-hc/system/core/include/sysutils
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+NetlinkListener.h
+file
+
+
+
+add
+
+ServiceManager.h
+file
+
+
+
+add
+
+FrameworkCommand.h
+file
+
+
+
+add
+
+FrameworkClient.h
+file
+
+
+
+add
+
+SocketListener.h
+file
+
+
+
+add
+
+FrameworkListener.h
+file
+
+
+
+add
+
+NetlinkEvent.h
+file
+
+
+
+add
+
+SocketClient.h
+file
+
+
+
+add
+

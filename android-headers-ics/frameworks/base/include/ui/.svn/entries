@@ -1,0 +1,189 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-ics/frameworks/base/include/ui
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+EGLNativeSurface.h
+file
+
+
+
+add
+
+PowerManager.h
+file
+
+
+
+add
+
+EGLUtils.h
+file
+
+
+
+add
+
+Point.h
+file
+
+
+
+add
+
+PixelFormat.h
+file
+
+
+
+add
+
+VirtualKeyMap.h
+file
+
+
+
+add
+
+Rect.h
+file
+
+
+
+add
+
+Input.h
+file
+
+
+
+add
+
+Keyboard.h
+file
+
+
+
+add
+
+KeyCharacterMap.h
+file
+
+
+
+add
+
+KeycodeLabels.h
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+GraphicBuffer.h
+file
+
+
+
+add
+
+GraphicBufferAllocator.h
+file
+
+
+
+add
+
+InputTransport.h
+file
+
+
+
+add
+
+GraphicBufferMapper.h
+file
+
+
+
+add
+
+android_native_buffer.h
+file
+
+
+
+add
+
+GraphicLog.h
+file
+
+
+
+add
+
+DisplayInfo.h
+file
+
+
+
+add
+
+egl
+dir
+
+
+
+add
+
+Region.h
+file
+
+
+
+add
+
+FramebufferNativeWindow.h
+file
+
+
+
+add
+
+KeyLayoutMap.h
+file
+
+
+
+add
+

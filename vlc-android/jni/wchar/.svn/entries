@@ -1,0 +1,238 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/vlc-android/jni/wchar
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+wcpncpy.c
+file
+
+
+
+add
+
+wcscat.c
+file
+
+
+
+add
+
+wcslcpy.c
+file
+
+
+
+add
+
+wcsstr.c
+file
+
+
+
+add
+
+wcsncpy.c
+file
+
+
+
+add
+
+wcscasecmp.c
+file
+
+
+
+add
+
+wcschr.c
+file
+
+
+
+add
+
+wcsxfrm.c
+file
+
+
+
+add
+
+wcslen.c
+file
+
+
+
+add
+
+wmemmove.c
+file
+
+
+
+add
+
+wcscmp.c
+file
+
+
+
+add
+
+wcswidth.c
+file
+
+
+
+add
+
+wcslcat.c
+file
+
+
+
+add
+
+wmemchr.c
+file
+
+
+
+add
+
+wcsncat.c
+file
+
+
+
+add
+
+wcpcpy.c
+file
+
+
+
+add
+
+wmemcmp.c
+file
+
+
+
+add
+
+wcsdup.c
+file
+
+
+
+add
+
+wcsncasecmp.c
+file
+
+
+
+add
+
+wcscoll.c
+file
+
+
+
+add
+
+wcscpy.c
+file
+
+
+
+add
+
+wcsnlen.c
+file
+
+
+
+add
+
+wcsncmp.c
+file
+
+
+
+add
+
+wcstok.c
+file
+
+
+
+add
+
+wcsrchr.c
+file
+
+
+
+add
+
+wcspbrk.c
+file
+
+
+
+add
+
+wcsspn.c
+file
+
+
+
+add
+
+wcscspn.c
+file
+
+
+
+add
+
+wmemset.c
+file
+
+
+
+add
+
+wmemcpy.c
+file
+
+
+
+add
+

@@ -1,0 +1,56 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/ActionBarSherlock/res/color
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+abs__primary_text_disable_only_holo_dark.xml
+file
+
+
+
+add
+
+abs__primary_text_holo_light.xml
+file
+
+
+
+add
+
+abs__primary_text_disable_only_holo_light.xml
+file
+
+
+
+add
+
+abs__primary_text_holo_dark.xml
+file
+
+
+
+add
+

@@ -1,0 +1,49 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-hc
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+hardware
+dir
+
+
+
+add
+
+frameworks
+dir
+
+
+
+add
+
+system
+dir
+
+
+
+add
+

@@ -1,0 +1,112 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-gingerbread/system/core/include
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+arch
+dir
+
+
+
+add
+
+sysutils
+dir
+
+
+
+add
+
+diskconfig
+dir
+
+
+
+add
+
+android
+dir
+
+
+
+add
+
+zipfile
+dir
+
+
+
+add
+
+ctest
+dir
+
+
+
+add
+
+cutils
+dir
+
+
+
+add
+
+mincrypt
+dir
+
+
+
+add
+
+acc
+dir
+
+
+
+add
+
+pixelflinger
+dir
+
+
+
+add
+
+reboot
+dir
+
+
+
+add
+
+private
+dir
+
+
+
+add
+

@@ -1,0 +1,133 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-ics/frameworks/base/native/include/android
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+rect.h
+file
+
+
+
+add
+
+storage_manager.h
+file
+
+
+
+add
+
+input.h
+file
+
+
+
+add
+
+looper.h
+file
+
+
+
+add
+
+obb.h
+file
+
+
+
+add
+
+native_activity.h
+file
+
+
+
+add
+
+keycodes.h
+file
+
+
+
+add
+
+configuration.h
+file
+
+
+
+add
+
+window.h
+file
+
+
+
+add
+
+asset_manager_jni.h
+file
+
+
+
+add
+
+asset_manager.h
+file
+
+
+
+add
+
+sensor.h
+file
+
+
+
+add
+
+bitmap.h
+file
+
+
+
+add
+
+native_window_jni.h
+file
+
+
+
+add
+
+native_window.h
+file
+
+
+
+add
+

@@ -1,0 +1,210 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-gingerbread/frameworks/base/include/ui
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+KeycodeLabels.h
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+InputDispatcher.h
+file
+
+
+
+add
+
+GraphicBuffer.h
+file
+
+
+
+add
+
+GraphicBufferAllocator.h
+file
+
+
+
+add
+
+InputTransport.h
+file
+
+
+
+add
+
+GraphicBufferMapper.h
+file
+
+
+
+add
+
+GraphicLog.h
+file
+
+
+
+add
+
+android_native_buffer.h
+file
+
+
+
+add
+
+EventHub.h
+file
+
+
+
+add
+
+DisplayInfo.h
+file
+
+
+
+add
+
+egl
+dir
+
+
+
+add
+
+Overlay.h
+file
+
+
+
+add
+
+InputReader.h
+file
+
+
+
+add
+
+Region.h
+file
+
+
+
+add
+
+FramebufferNativeWindow.h
+file
+
+
+
+add
+
+EGLNativeSurface.h
+file
+
+
+
+add
+
+PowerManager.h
+file
+
+
+
+add
+
+EGLUtils.h
+file
+
+
+
+add
+
+Point.h
+file
+
+
+
+add
+
+InputManager.h
+file
+
+
+
+add
+
+IOverlay.h
+file
+
+
+
+add
+
+PixelFormat.h
+file
+
+
+
+add
+
+Rect.h
+file
+
+
+
+add
+
+Input.h
+file
+
+
+
+add
+
+KeyCharacterMap.h
+file
+
+
+
+add
+

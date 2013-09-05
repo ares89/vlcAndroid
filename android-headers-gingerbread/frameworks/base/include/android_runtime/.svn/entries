@@ -1,0 +1,70 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-gingerbread/frameworks/base/include/android_runtime
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+android_view_Surface.h
+file
+
+
+
+add
+
+android_app_NativeActivity.h
+file
+
+
+
+add
+
+AndroidRuntime.h
+file
+
+
+
+add
+
+ActivityManager.h
+file
+
+
+
+add
+
+android_util_AssetManager.h
+file
+
+
+
+add
+
+android_content_res_Configuration.h
+file
+
+
+
+add
+

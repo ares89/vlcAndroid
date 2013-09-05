@@ -1,0 +1,91 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/WheelView/src/kankan/wheel/widget
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+WheelScroller.java
+file
+
+
+
+add
+
+WheelRecycle.java
+file
+
+
+
+add
+
+ItemsRange.java
+file
+
+
+
+add
+
+WheelView.java
+file
+
+
+
+add
+
+OnWheelChangedListener.java
+file
+
+
+
+add
+
+adapters
+dir
+
+
+
+add
+
+WheelAdapter.java
+file
+
+
+
+add
+
+OnWheelClickedListener.java
+file
+
+
+
+add
+
+OnWheelScrollListener.java
+file
+
+
+
+add
+

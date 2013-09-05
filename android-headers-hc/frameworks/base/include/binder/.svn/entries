@@ -1,0 +1,147 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-hc/frameworks/base/include/binder
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+BinderService.h
+file
+
+
+
+add
+
+BpBinder.h
+file
+
+
+
+add
+
+MemoryDealer.h
+file
+
+
+
+add
+
+MemoryHeapPmem.h
+file
+
+
+
+add
+
+MemoryHeapBase.h
+file
+
+
+
+add
+
+MemoryBase.h
+file
+
+
+
+add
+
+Binder.h
+file
+
+
+
+add
+
+IPCThreadState.h
+file
+
+
+
+add
+
+IServiceManager.h
+file
+
+
+
+add
+
+IPermissionController.h
+file
+
+
+
+add
+
+CursorWindow.h
+file
+
+
+
+add
+
+Parcel.h
+file
+
+
+
+add
+
+IInterface.h
+file
+
+
+
+add
+
+IBinder.h
+file
+
+
+
+add
+
+PermissionCache.h
+file
+
+
+
+add
+
+ProcessState.h
+file
+
+
+
+add
+
+IMemory.h
+file
+
+
+
+add
+

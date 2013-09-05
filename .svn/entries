@@ -1,0 +1,224 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+rename_package.sh
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+gcc
+dir
+
+
+
+add
+
+.mailmap
+file
+
+
+
+add
+
+android-headers-gingerbread
+dir
+
+
+
+add
+
+.git
+dir
+
+
+
+add
+
+compile.sh
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+env.sh
+file
+
+
+
+add
+
+vlc-android
+dir
+
+
+
+add
+
+android-headers-ics
+dir
+
+
+
+add
+
+dump-libs.sh
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+.gitignore
+file
+
+
+
+add
+
+android-libs
+dir
+
+
+
+add
+
+COPYING
+file
+
+
+
+add
+
+gen-env.sh
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+java-libs
+dir
+
+
+
+add
+
+NEWS
+file
+
+
+
+add
+
+Makefile
+file
+
+
+
+add
+
+android-headers-hc
+dir
+
+
+
+add
+
+find_modules.sh
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+vlc
+dir
+
+
+
+add
+
+patches
+dir
+
+
+
+add
+
+configure.sh
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+

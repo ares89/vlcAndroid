@@ -1,0 +1,147 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/ActionBarSherlock/src/com/actionbarsherlock/internal/widget
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+ActionBarView.java
+file
+
+
+
+add
+
+ActionBarContextView.java
+file
+
+
+
+add
+
+IcsAbsSpinner.java
+file
+
+
+
+add
+
+ActionBarContainer.java
+file
+
+
+
+add
+
+IcsLinearLayout.java
+file
+
+
+
+add
+
+FakeDialogPhoneWindow.java
+file
+
+
+
+add
+
+IcsView.java
+file
+
+
+
+add
+
+IcsAdapterView.java
+file
+
+
+
+add
+
+CapitalizingButton.java
+file
+
+
+
+add
+
+IcsSpinner.java
+file
+
+
+
+add
+
+CapitalizingTextView.java
+file
+
+
+
+add
+
+IcsColorDrawable.java
+file
+
+
+
+add
+
+ScrollingTabContainerView.java
+file
+
+
+
+add
+
+AbsActionBarView.java
+file
+
+
+
+add
+
+CollapsibleActionViewWrapper.java
+file
+
+
+
+add
+
+IcsListPopupWindow.java
+file
+
+
+
+add
+
+IcsProgressBar.java
+file
+
+
+
+add
+

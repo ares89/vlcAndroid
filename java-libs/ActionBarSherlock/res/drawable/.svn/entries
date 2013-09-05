@@ -1,0 +1,210 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/ActionBarSherlock/res/drawable
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+abs__progress_medium_holo.xml
+file
+
+
+
+add
+
+abs__progress_horizontal_holo_light.xml
+file
+
+
+
+add
+
+abs__tab_indicator_ab_holo.xml
+file
+
+
+
+add
+
+abs__activated_background_holo_dark.xml
+file
+
+
+
+add
+
+abs__textfield_searchview_right_holo_dark.xml
+file
+
+
+
+add
+
+abs__spinner_ab_holo_light.xml
+file
+
+
+
+add
+
+abs__textfield_searchview_holo_dark.xml
+file
+
+
+
+add
+
+abs__list_selector_background_transition_holo_light.xml
+file
+
+
+
+add
+
+abs__list_selector_holo_dark.xml
+file
+
+
+
+add
+
+abs__ic_menu_moreoverflow_holo_light.xml
+file
+
+
+
+add
+
+abs__progress_horizontal_holo_dark.xml
+file
+
+
+
+add
+
+abs__ic_clear.xml
+file
+
+
+
+add
+
+abs__spinner_ab_holo_dark.xml
+file
+
+
+
+add
+
+abs__btn_cab_done_holo_light.xml
+file
+
+
+
+add
+
+abs__item_background_holo_light.xml
+file
+
+
+
+add
+
+abs__list_selector_background_transition_holo_dark.xml
+file
+
+
+
+add
+
+abs__ic_menu_moreoverflow_holo_dark.xml
+file
+
+
+
+add
+
+abs__search_dropdown_light.xml
+file
+
+
+
+add
+
+abs__ic_clear_holo_light.xml
+file
+
+
+
+add
+
+abs__activated_background_holo_light.xml
+file
+
+
+
+add
+
+abs__textfield_searchview_right_holo_light.xml
+file
+
+
+
+add
+
+abs__item_background_holo_dark.xml
+file
+
+
+
+add
+
+abs__btn_cab_done_holo_dark.xml
+file
+
+
+
+add
+
+abs__textfield_searchview_holo_light.xml
+file
+
+
+
+add
+
+abs__search_dropdown_dark.xml
+file
+
+
+
+add
+
+abs__list_selector_holo_light.xml
+file
+
+
+
+add
+

@@ -1,0 +1,378 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-hc/frameworks/base/include/utils
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+Compat.h
+file
+
+
+
+add
+
+ZipUtils.h
+file
+
+
+
+add
+
+BackupHelpers.h
+file
+
+
+
+add
+
+threads.h
+file
+
+
+
+add
+
+Endian.h
+file
+
+
+
+add
+
+SystemClock.h
+file
+
+
+
+add
+
+StreamingZipInflater.h
+file
+
+
+
+add
+
+ObbFile.h
+file
+
+
+
+add
+
+Timers.h
+file
+
+
+
+add
+
+TypeHelpers.h
+file
+
+
+
+add
+
+StringArray.h
+file
+
+
+
+add
+
+LinearTransform.h
+file
+
+
+
+add
+
+ZipFileCRO.h
+file
+
+
+
+add
+
+RefBase.h
+file
+
+
+
+add
+
+BufferedTextOutput.h
+file
+
+
+
+add
+
+AssetManager.h
+file
+
+
+
+add
+
+StopWatch.h
+file
+
+
+
+add
+
+Errors.h
+file
+
+
+
+add
+
+String16.h
+file
+
+
+
+add
+
+StrongPointer.h
+file
+
+
+
+add
+
+Flattenable.h
+file
+
+
+
+add
+
+SortedVector.h
+file
+
+
+
+add
+
+VectorImpl.h
+file
+
+
+
+add
+
+KeyedVector.h
+file
+
+
+
+add
+
+Unicode.h
+file
+
+
+
+add
+
+Debug.h
+file
+
+
+
+add
+
+BitSet.h
+file
+
+
+
+add
+
+misc.h
+file
+
+
+
+add
+
+String8.h
+file
+
+
+
+add
+
+ByteOrder.h
+file
+
+
+
+add
+
+Looper.h
+file
+
+
+
+add
+
+SharedBuffer.h
+file
+
+
+
+add
+
+CallStack.h
+file
+
+
+
+add
+
+Vector.h
+file
+
+
+
+add
+
+Singleton.h
+file
+
+
+
+add
+
+BlobCache.h
+file
+
+
+
+add
+
+ZipFileRO.h
+file
+
+
+
+add
+
+TextOutput.h
+file
+
+
+
+add
+
+Tokenizer.h
+file
+
+
+
+add
+
+ashmem.h
+file
+
+
+
+add
+
+List.h
+file
+
+
+
+add
+
+ResourceTypes.h
+file
+
+
+
+add
+
+Atomic.h
+file
+
+
+
+add
+
+FileMap.h
+file
+
+
+
+add
+
+AssetDir.h
+file
+
+
+
+add
+
+Asset.h
+file
+
+
+
+add
+
+GenerationCache.h
+file
+
+
+
+add
+
+Functor.h
+file
+
+
+
+add
+
+Log.h
+file
+
+
+
+add
+
+PropertyMap.h
+file
+
+
+
+add
+

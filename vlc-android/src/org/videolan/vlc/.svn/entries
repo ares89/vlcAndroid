@@ -1,0 +1,168 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/vlc-android/src/org/videolan/vlc
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+VLCApplication.java
+file
+
+
+
+add
+
+Thumbnailer.java
+file
+
+
+
+add
+
+VlcRunnable.java
+file
+
+
+
+add
+
+Util.java
+file
+
+
+
+add
+
+Media.java
+file
+
+
+
+add
+
+RemoteControlClientReceiver.java
+file
+
+
+
+add
+
+AudioService.java
+file
+
+
+
+add
+
+RepeatType.java
+file
+
+
+
+add
+
+VLCCallbackTask.java
+file
+
+
+
+add
+
+WeakHandler.java
+file
+
+
+
+add
+
+AudioServiceController.java
+file
+
+
+
+add
+
+MurmurHash.java
+file
+
+
+
+add
+
+PhoneStateReceiver.java
+file
+
+
+
+add
+
+BitmapCache.java
+file
+
+
+
+add
+
+VlcCrashHandler.java
+file
+
+
+
+add
+
+widget
+dir
+
+
+
+add
+
+interfaces
+dir
+
+
+
+add
+
+gui
+dir
+
+
+
+add
+
+MediaLibrary.java
+file
+
+
+
+add
+
+MediaDatabase.java
+file
+
+
+
+add
+

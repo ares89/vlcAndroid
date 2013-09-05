@@ -1,0 +1,126 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-ics/hardware/libhardware/include/hardware
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+audio_policy.h
+file
+
+
+
+add
+
+audio.h
+file
+
+
+
+add
+
+gralloc.h
+file
+
+
+
+add
+
+qemu_pipe.h
+file
+
+
+
+add
+
+nfc.h
+file
+
+
+
+add
+
+hwcomposer.h
+file
+
+
+
+add
+
+fb.h
+file
+
+
+
+add
+
+camera.h
+file
+
+
+
+add
+
+gps.h
+file
+
+
+
+add
+
+lights.h
+file
+
+
+
+add
+
+qemud.h
+file
+
+
+
+add
+
+sensors.h
+file
+
+
+
+add
+
+audio_effect.h
+file
+
+
+
+add
+
+hardware.h
+file
+
+
+
+add
+

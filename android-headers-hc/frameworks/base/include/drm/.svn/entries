@@ -1,0 +1,105 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-hc/frameworks/base/include/drm
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+DrmManagerClient.h
+file
+
+
+
+add
+
+DrmInfo.h
+file
+
+
+
+add
+
+DrmConvertedStatus.h
+file
+
+
+
+add
+
+DrmInfoEvent.h
+file
+
+
+
+add
+
+DrmInfoStatus.h
+file
+
+
+
+add
+
+DrmMetadata.h
+file
+
+
+
+add
+
+DrmRights.h
+file
+
+
+
+add
+
+drm_framework_common.h
+file
+
+
+
+add
+
+DrmInfoRequest.h
+file
+
+
+
+add
+
+DrmConstraints.h
+file
+
+
+
+add
+
+DrmSupportInfo.h
+file
+
+
+
+add
+

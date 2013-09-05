@@ -1,0 +1,133 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/vlc-android
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+jni
+dir
+
+
+
+add
+
+proguard.cfg
+file
+
+
+
+add
+
+.project
+file
+
+
+
+add
+
+src
+dir
+
+
+
+add
+
+res
+dir
+
+
+
+add
+
+libs
+dir
+
+
+
+add
+
+build.xml
+file
+
+
+
+add
+
+.classpath
+file
+
+
+
+add
+
+project.properties
+file
+
+
+
+add
+
+assets
+dir
+
+
+
+add
+
+.gitignore
+file
+
+
+
+add
+
+AndroidManifest.xml
+file
+
+
+
+add
+
+bin
+dir
+
+
+
+add
+
+gen
+dir
+
+
+
+add
+
+obj
+dir
+
+
+
+add
+

@@ -1,0 +1,84 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-ics/frameworks/base/include/private
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+hwui
+dir
+
+
+
+add
+
+opengles
+dir
+
+
+
+add
+
+README
+file
+
+
+
+add
+
+ui
+dir
+
+
+
+add
+
+surfaceflinger
+dir
+
+
+
+add
+
+media
+dir
+
+
+
+add
+
+utils
+dir
+
+
+
+add
+
+binder
+dir
+
+
+
+add
+

@@ -1,0 +1,70 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/vlc-android/src/org/videolan/vlc/widget
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+VLCAppWidgetProvider.java
+file
+
+
+
+add
+
+FlingViewGroup.java
+file
+
+
+
+add
+
+AudioMiniPlayer.java
+file
+
+
+
+add
+
+PlayerControlClassic.java
+file
+
+
+
+add
+
+ExpandableLayout.java
+file
+
+
+
+add
+
+PlayerControlWheel.java
+file
+
+
+
+add
+

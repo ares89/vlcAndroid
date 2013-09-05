@@ -1,0 +1,70 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/SlidingMenu/src/com/slidingmenu/lib
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+SlidingMenu.java
+file
+
+
+
+add
+
+CustomViewBehind.java
+file
+
+
+
+add
+
+app
+dir
+
+
+
+add
+
+CustomViewAbove.java
+file
+
+
+
+add
+
+MenuInterface.java
+file
+
+
+
+add
+
+CanvasTransformerBuilder.java
+file
+
+
+
+add
+

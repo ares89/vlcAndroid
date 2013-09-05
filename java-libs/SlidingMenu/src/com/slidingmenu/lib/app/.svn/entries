@@ -1,0 +1,70 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/SlidingMenu/src/com/slidingmenu/lib/app
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+SlidingFragmentActivity.java
+file
+
+
+
+add
+
+SlidingActivityBase.java
+file
+
+
+
+add
+
+SlidingListActivity.java
+file
+
+
+
+add
+
+SlidingPreferenceActivity.java
+file
+
+
+
+add
+
+SlidingActivityHelper.java
+file
+
+
+
+add
+
+SlidingActivity.java
+file
+
+
+
+add
+

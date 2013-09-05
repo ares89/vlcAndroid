@@ -1,0 +1,471 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/vlc-android/res
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+values-v14
+dir
+
+
+
+add
+
+drawable-mdpi
+dir
+
+
+
+add
+
+values-th
+dir
+
+
+
+add
+
+values-pl
+dir
+
+
+
+add
+
+drawable-mdpi-v11
+dir
+
+
+
+add
+
+values-ca
+dir
+
+
+
+add
+
+values-pt
+dir
+
+
+
+add
+
+drawable
+dir
+
+
+
+add
+
+values-tr
+dir
+
+
+
+add
+
+values-ru
+dir
+
+
+
+add
+
+drawable-xhdpi-v9
+dir
+
+
+
+add
+
+values-gd
+dir
+
+
+
+add
+
+values-gl
+dir
+
+
+
+add
+
+values-ar
+dir
+
+
+
+add
+
+values-cs
+dir
+
+
+
+add
+
+values-pt-rBR
+dir
+
+
+
+add
+
+drawable-hdpi
+dir
+
+
+
+add
+
+values-km
+dir
+
+
+
+add
+
+menu
+dir
+
+
+
+add
+
+values-es
+dir
+
+
+
+add
+
+values-wa
+dir
+
+
+
+add
+
+values-et
+dir
+
+
+
+add
+
+values-eu
+dir
+
+
+
+add
+
+values-ko
+dir
+
+
+
+add
+
+drawable-ldpi
+dir
+
+
+
+add
+
+values-cy
+dir
+
+
+
+add
+
+values-is
+dir
+
+
+
+add
+
+drawable-hdpi-v11
+dir
+
+
+
+add
+
+values-it
+dir
+
+
+
+add
+
+values-sk
+dir
+
+
+
+add
+
+values-mr
+dir
+
+
+
+add
+
+values-uk
+dir
+
+
+
+add
+
+values-iw
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+svn:special
+
+layout
+dir
+
+
+
+add
+
+values-or
+dir
+
+
+
+add
+
+color
+dir
+
+
+
+add
+
+values-da
+dir
+
+
+
+add
+
+values-sr
+dir
+
+
+
+add
+
+values-bn-rIN
+dir
+
+
+
+add
+
+values-my
+dir
+
+
+
+add
+
+values-ur
+dir
+
+
+
+add
+
+anim
+dir
+
+
+
+add
+
+values-de
+dir
+
+
+
+add
+
+values-ja
+dir
+
+
+
+add
+
+values-zh-rTW
+dir
+
+
+
+add
+
+layout-land
+dir
+
+
+
+add
+
+values-he
+dir
+
+
+
+add
+
+drawable-xhdpi
+dir
+
+
+
+add
+
+values-nb
+dir
+
+
+
+add
+
+values-hi
+dir
+
+
+
+add
+
+values-zh-rCN
+dir
+
+
+
+add
+
+values
+dir
+
+
+
+add
+
+drawable-hdpi-v9
+dir
+
+
+
+add
+
+drawable-xhdpi-v11
+dir
+
+
+
+add
+
+xml
+dir
+
+
+
+add
+
+values-bs
+dir
+
+
+
+add
+
+values-v11
+dir
+
+
+
+add
+
+drawable-mdpi-v9
+dir
+
+
+
+add
+
+values-fr
+dir
+
+
+
+add
+
+values-te
+dir
+
+
+
+add
+
+values-hr
+dir
+
+
+
+add
+
+values-nl
+dir
+
+
+
+add
+

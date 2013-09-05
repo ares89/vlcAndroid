@@ -1,0 +1,91 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/ActionBarSherlock/src/com/actionbarsherlock/app
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+SherlockListFragment.java
+file
+
+
+
+add
+
+SherlockFragmentActivity.java
+file
+
+
+
+add
+
+SherlockDialogFragment.java
+file
+
+
+
+add
+
+SherlockFragment.java
+file
+
+
+
+add
+
+ActionBar.java
+file
+
+
+
+add
+
+SherlockListActivity.java
+file
+
+
+
+add
+
+SherlockPreferenceActivity.java
+file
+
+
+
+add
+
+SherlockExpandableListActivity.java
+file
+
+
+
+add
+
+SherlockActivity.java
+file
+
+
+
+add
+

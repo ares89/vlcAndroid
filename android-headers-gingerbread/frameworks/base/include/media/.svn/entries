@@ -1,0 +1,343 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-gingerbread/frameworks/base/include/media
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+mediametadataretriever.h
+file
+
+
+
+add
+
+IAudioPolicyService.h
+file
+
+
+
+add
+
+IOMX.h
+file
+
+
+
+add
+
+MediaPlayerInterface.h
+file
+
+
+
+add
+
+IMediaRecorder.h
+file
+
+
+
+add
+
+PVMetadataRetriever.h
+file
+
+
+
+add
+
+Metadata.h
+file
+
+
+
+add
+
+IMediaMetadataRetriever.h
+file
+
+
+
+add
+
+IAudioFlinger.h
+file
+
+
+
+add
+
+AudioTrack.h
+file
+
+
+
+add
+
+thread_init.h
+file
+
+
+
+add
+
+JetPlayer.h
+file
+
+
+
+add
+
+MediaRecorderBase.h
+file
+
+
+
+add
+
+AudioRecord.h
+file
+
+
+
+add
+
+EffectsFactoryApi.h
+file
+
+
+
+add
+
+PVPlayer.h
+file
+
+
+
+add
+
+IMediaPlayerClient.h
+file
+
+
+
+add
+
+EffectVisualizerApi.h
+file
+
+
+
+add
+
+IEffectClient.h
+file
+
+
+
+add
+
+OverlayRenderer.h
+file
+
+
+
+add
+
+EffectEqualizerApi.h
+file
+
+
+
+add
+
+IAudioRecord.h
+file
+
+
+
+add
+
+PVMediaRecorder.h
+file
+
+
+
+add
+
+ToneGenerator.h
+file
+
+
+
+add
+
+IMediaRecorderClient.h
+file
+
+
+
+add
+
+AudioEffect.h
+file
+
+
+
+add
+
+EffectPresetReverbApi.h
+file
+
+
+
+add
+
+IAudioFlingerClient.h
+file
+
+
+
+add
+
+stagefright
+dir
+
+
+
+add
+
+MediaProfiles.h
+file
+
+
+
+add
+
+EffectApi.h
+file
+
+
+
+add
+
+IMediaPlayerService.h
+file
+
+
+
+add
+
+EffectVirtualizerApi.h
+file
+
+
+
+add
+
+mediascanner.h
+file
+
+
+
+add
+
+MediaMetadataRetrieverInterface.h
+file
+
+
+
+add
+
+mediaplayer.h
+file
+
+
+
+add
+
+Visualizer.h
+file
+
+
+
+add
+
+IMediaDeathNotifier.h
+file
+
+
+
+add
+
+EffectEnvironmentalReverbApi.h
+file
+
+
+
+add
+
+IAudioTrack.h
+file
+
+
+
+add
+
+IMediaPlayer.h
+file
+
+
+
+add
+
+IEffect.h
+file
+
+
+
+add
+
+mediarecorder.h
+file
+
+
+
+add
+
+EffectBassBoostApi.h
+file
+
+
+
+add
+
+AudioSystem.h
+file
+
+
+
+add
+

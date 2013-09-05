@@ -1,0 +1,203 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/ActionBarSherlock/res
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+values-sw600dp
+dir
+
+
+
+add
+
+drawable-hdpi
+dir
+
+
+
+add
+
+values-v11
+dir
+
+
+
+add
+
+layout-large
+dir
+
+
+
+add
+
+values-v14
+dir
+
+
+
+add
+
+drawable-mdpi
+dir
+
+
+
+add
+
+values-large-hdpi-1024x600
+dir
+
+
+
+add
+
+values-land
+dir
+
+
+
+add
+
+values-w500dp
+dir
+
+
+
+add
+
+layout
+dir
+
+
+
+add
+
+values-w600dp
+dir
+
+
+
+add
+
+color
+dir
+
+
+
+add
+
+values-xlarge
+dir
+
+
+
+add
+
+values-large-mdpi-1024x600
+dir
+
+
+
+add
+
+values-w360dp
+dir
+
+
+
+add
+
+drawable
+dir
+
+
+
+add
+
+values-w480dp
+dir
+
+
+
+add
+
+layout-v14
+dir
+
+
+
+add
+
+drawable-v11
+dir
+
+
+
+add
+
+values-large
+dir
+
+
+
+add
+
+values-large-land-hdpi-1024x600
+dir
+
+
+
+add
+
+drawable-xhdpi
+dir
+
+
+
+add
+
+values-large-land-mdpi-1024x600
+dir
+
+
+
+add
+
+layout-xlarge
+dir
+
+
+
+add
+
+values
+dir
+
+
+
+add
+

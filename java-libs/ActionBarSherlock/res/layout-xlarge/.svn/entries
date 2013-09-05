@@ -1,0 +1,42 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/ActionBarSherlock/res/layout-xlarge
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+abs__screen_action_bar.xml
+file
+
+
+
+add
+
+abs__screen_action_bar_overlay.xml
+file
+
+
+
+add
+

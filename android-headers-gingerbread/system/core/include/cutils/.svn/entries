@@ -1,0 +1,273 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/android-headers-gingerbread/system/core/include/cutils
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+dir_hash.h
+file
+
+
+
+add
+
+config_utils.h
+file
+
+
+
+add
+
+atomic-inline.h
+file
+
+
+
+add
+
+atomic-arm.h
+file
+
+
+
+add
+
+threads.h
+file
+
+
+
+add
+
+misc.h
+file
+
+
+
+add
+
+properties.h
+file
+
+
+
+add
+
+iosched_policy.h
+file
+
+
+
+add
+
+cpu_info.h
+file
+
+
+
+add
+
+sched_policy.h
+file
+
+
+
+add
+
+mspace.h
+file
+
+
+
+add
+
+event_tag_map.h
+file
+
+
+
+add
+
+ashmem.h
+file
+
+
+
+add
+
+tztime.h
+file
+
+
+
+add
+
+mq.h
+file
+
+
+
+add
+
+process_name.h
+file
+
+
+
+add
+
+logger.h
+file
+
+
+
+add
+
+selector.h
+file
+
+
+
+add
+
+jstring.h
+file
+
+
+
+add
+
+zygote.h
+file
+
+
+
+add
+
+hashmap.h
+file
+
+
+
+add
+
+log.h
+file
+
+
+
+add
+
+logd.h
+file
+
+
+
+add
+
+record_stream.h
+file
+
+
+
+add
+
+uio.h
+file
+
+
+
+add
+
+logprint.h
+file
+
+
+
+add
+
+atomic-x86.h
+file
+
+
+
+add
+
+native_handle.h
+file
+
+
+
+add
+
+memory.h
+file
+
+
+
+add
+
+compiler.h
+file
+
+
+
+add
+
+sockets.h
+file
+
+
+
+add
+
+open_memstream.h
+file
+
+
+
+add
+
+atomic.h
+file
+
+
+
+add
+
+array.h
+file
+
+
+
+add
+
+abort_socket.h
+file
+
+
+
+add
+

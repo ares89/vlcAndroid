@@ -1,0 +1,119 @@
+10
+
+dir
+0
+http://10.45.30.64:18080/svn/Homecare/homecareclient/trunk/vlc_android/android/java-libs/ActionBarSherlock/src/com/actionbarsherlock/internal/nineoldandroids/animation
+http://10.45.30.64:18080/svn/Homecare
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bd917ebd-ac02-4420-88a5-1ce1c9e2025b
+
+IntKeyframeSet.java
+file
+
+
+
+add
+
+Animator.java
+file
+
+
+
+add
+
+IntEvaluator.java
+file
+
+
+
+add
+
+KeyframeSet.java
+file
+
+
+
+add
+
+AnimatorListenerAdapter.java
+file
+
+
+
+add
+
+ObjectAnimator.java
+file
+
+
+
+add
+
+PropertyValuesHolder.java
+file
+
+
+
+add
+
+Keyframe.java
+file
+
+
+
+add
+
+TypeEvaluator.java
+file
+
+
+
+add
+
+FloatKeyframeSet.java
+file
+
+
+
+add
+
+AnimatorSet.java
+file
+
+
+
+add
+
+ValueAnimator.java
+file
+
+
+
+add
+
+FloatEvaluator.java
+file
+
+
+
+add
+
